@@ -35,119 +35,6 @@ body {
 	max-width: 3000px;
 }
 
-.main-nav {
-	position: fixed;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	padding: 35px;
-	top: 0;
-	left: 0;
-	z-index: 2;
-	width: 100%;
-	max-height: 900px;
-	background: var(--dark);
-	color: var(--light);
-	transition-duration: .5s;
-	overflow: hidden;
-}
-
-.active {
-	background: var(--light);
-	color: var(--dark);
-	transition-duration: .5s;
-}
-
-.main-nav-btn {
-	user-select: none;
-	cursor: pointer;
-	font-size: 1.5em;
-	transition-duration: .2s;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: row;
-}
-
-.main-nav-btn .fa-location-arrow {
-	visibility: hidden;
-	opacity: 0;
-	font-size: 20%;
-	transition-duration: .2s;
-}
-
-.main-nav-btn:hover .fa-location-arrow {
-	visibility: visible;
-	opacity: 1;
-}
-
-.main-nav-btn:hover {
-	opacity: .8;
-}
-
-.clicked {
-	font-size: 1em;
-	transition-duration: .2s;
-	font-weight: 900;
-	color: var(--link);
-}
-
-.main-nav-list {
-	visibility: hidden;
-	opacity: 0;
-	transition-duration: .2s;
-	margin-right: -20%;
-}
-
-.show {
-	visibility: visible;
-	opacity: 1;
-	transition-duration: .2s;
-	margin-right: 0;
-}
-
-.main-nav-list ul {
-	list-style: none;
-	display: flex;
-}
-
-.main-nav-list ul li {
-	user-select: none;
-	margin: 0 20px;
-	font-weight: 600;
-}
-
-.main-nav-list ul li .fa-vector-square {
-	visibility: hidden;
-	opacity: 0;
-	transition-duration: .2s;
-}
-
-.main-nav-list ul li:hover .fa-vector-square {
-	visibility: visible;
-	opacity: 1;
-	animation: spin 3s linear infinite;
-}
-
-@keyframes spin {
-	0% {
-		transform: rotateZ(0deg);
-	}
-
-	100% {
-		transform: rotateZ(360deg);
-	}
-}
-
-.main-nav-list ul li:hover {
-	color: var(--link);
-}
-
-.main-nav-list ul li a {
-	text-decoration: none;
-	color: inherit;
-}
-
 /***************************************************************************************************
 *
 *	GENERAL
@@ -188,225 +75,357 @@ body {
 	font-family: var(--main);
 }
 
-/***************************************************************************************************
-*
-*	BANNER SECTION
-*
-***************************************************************************************************/
+@media screen and (min-width: 1200px) {
 
-#banner {
-	width: 100%;
-	height: 100vh;
-	max-height: 900px;
-	background: var(--dark);
-	position: relative;
-	color: var(--light);
-	padding-top: 120px;
-}
+	::-webkit-scrollbar {
+		width: 10px;
+	}
 
-#banner > .sm-size-article {
-	width: 60%;
-	height: 50%;
-	text-align: justify;
-}
+	::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 10px var(--dark);
+	}
 
-#banner > .lg-size-article {
-	font-family: var(--sub);
-	letter-spacing: 5px;
-}
+	::-webkit-scrollbar-thumb {
+		border-radius: 5px;
+		background: var(--light);
+	}
 
-#banner > #right-object {
-	position: absolute;
-	top: 120px;
-	right: 5%;
-	background: var(--light);
-	width: 500px;
-	height: 250px;
-	color: var(--dark);
-	padding: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+	::-webkit-scrollbar-thumb:hover {
+		background: var(--link);
+	}
 
-#banner > #right-object h1 {
-	font-size: 1.5em;
-	font-weight: 900;	
-}
+	.main-nav {
+		position: fixed;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		padding: 35px;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		width: 100%;
+		max-height: 900px;
+		background: var(--dark);
+		color: var(--light);
+		transition-duration: .5s;
+		overflow: hidden;
+	}
 
-#banner > #right-object .cover {
-	width: 40%;
-	height: 100%;
-	position: absolute;
-	background: var(--black);
-	opacity: .7;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	top: 0;
-	left: 0;
-	opacity: 0;
-	cursor: pointer;
-	transition-duration: .5s;
-	padding: 20px;
-}
+	.active {
+		background: var(--light);
+		color: var(--dark);
+		transition-duration: .5s;
+	}
 
-#banner > #right-object:hover .cover {
-	width: 100%;
-	opacity: 1;
-	transition-duration: 1s;
-	box-shadow: 0 0 5px var(--black),
-				0 0 10px var(--light),
-				0 0 15px var(--black),
-				0 0 20px var(--black);
-}
+	.main-nav-btn {
+		user-select: none;
+		cursor: pointer;
+		font-size: 1.5em;
+		transition-duration: .2s;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+	}
 
-#banner > #right-object .cover .caption {
-	color: var(--light);
-	font-family: var(--sub);
-	font-weight: 100;
-}
+	.main-nav-btn .fa-location-arrow {
+		visibility: hidden;
+		opacity: 0;
+		font-size: 20%;
+		transition-duration: .2s;
+	}
 
-#sourcecode {
-	font-size: .8em;
-	position: absolute;
-	bottom: 10%;
-	right: 5%;
-	color: var(--link);
-	text-decoration: none;
-}
+	.main-nav-btn:hover .fa-location-arrow {
+		visibility: visible;
+		opacity: 1;
+	}
 
-#sourcecode .fa-code {
-	visibility: hidden;
-	opacity: 0;
-}
+	.main-nav-btn:hover {
+		opacity: .8;
+	}
 
-#sourcecode:hover {
-	transition-duration: .5s;
-	transform: rotateZ(-5deg);
-	color: var(--light);
-}
+	.clicked {
+		font-size: 1em;
+		transition-duration: .2s;
+		font-weight: 900;
+		color: var(--link);
+	}
 
-#sourcecode:hover .fa-code {
-	visibility: visible;
-	opacity: 1;
-	transition-duration: .2s;
-}
+	.main-nav-list {
+		visibility: hidden;
+		opacity: 0;
+		transition-duration: .2s;
+		margin-right: -20%;
+	}
 
-/***************************************************************************************************
-*
-*	INTRO SECTION
-*
-***************************************************************************************************/
+	.show {
+		visibility: visible;
+		opacity: 1;
+		transition-duration: .2s;
+		margin-right: 0;
+	}
 
-#intro {
-	width: 100%;
-	height: auto;
-	background: var(--light);
-	position: relative;
-	color: var(--dark);
-	padding-top: 130px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-}
+	.main-nav-list ul {
+		list-style: none;
+		display: flex;
+	}
 
-#intro .title {
-	color: var(--link);
-}
+	.main-nav-list ul li {
+		user-select: none;
+		margin: 0 20px;
+		font-weight: 600;
+	}
 
-#intro hr {
-	width: 50%;
-	margin: 40px;
-	color: var(--dark);
-}
+	.main-nav-list ul li .fa-vector-square {
+		visibility: hidden;
+		opacity: 0;
+		transition-duration: .2s;
+	}
 
-#intro > .title, #intro > .subtitle {
-	text-align: center;
-}
+	.main-nav-list ul li:hover .fa-vector-square {
+		visibility: visible;
+		opacity: 1;
+		animation: spin 3s linear infinite;
+	}
 
-#intro .sm-size-article ul {
-	list-style: none;
-	padding: 20px 0 0 80px;
-}
+	@keyframes spin {
+		0% {
+			transform: rotateZ(0deg);
+		}
 
-#intro .sm-size-article ul li {
-	cursor: pointer;
-	margin: 20px 0;
-}
+		100% {
+			transform: rotateZ(360deg);
+		}
+	}
 
-#intro .sm-size-article ul li:hover {
-	color: var(--black);
-}
+	.main-nav-list ul li:hover {
+		color: var(--link);
+	}
 
-#intro .sm-size-article ul li .fa-arrow-right a {
-	text-decoration: none;
-	color: inherit;
-	font-weight: 300;
-}
+	.main-nav-list ul li a {
+		text-decoration: none;
+		color: inherit;
+	}
 
-#intro .sm-size-article ul li .fa-arrow-right {
-	visibility: hidden;
-	opacity: 0;
-	color: var(--link);
-	transition-duration: .5s;
-}
+	/***************************************************************************************************
+	*
+	*	BANNER SECTION
+	*
+	***************************************************************************************************/
 
-#intro .sm-size-article ul li:hover .fa-arrow-right {
-	visibility: visible;
-	opacity: 1;
-	transition-duration: .5s;
-	margin-left: 50px;
-}
+	#banner {
+		width: 100%;
+		height: 100vh;
+		max-height: 900px;
+		background: var(--dark);
+		position: relative;
+		color: var(--light);
+		padding-top: 120px;
+	}
 
-#intro .grid {
-	width: 100%;
-	height: 500px;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(2, 1fr);
-	grid-gap: 10px;
-	position: relative;
-}
+	#banner > .sm-size-article {
+		width: 60%;
+		height: 50%;
+		text-align: justify;
+	}
 
-#intro .grid > .box {
-	position: relative;
-	width: 100%;
-	height: 100%;
-	cursor: pointer;
-}
+	#banner > .lg-size-article {
+		font-family: var(--sub);
+		letter-spacing: 5px;
+	}
 
-#intro .grid > .box img {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 10px;
-}
+	#banner > #right-object {
+		position: absolute;
+		top: 120px;
+		right: 5%;
+		background: var(--light);
+		width: 500px;
+		height: 250px;
+		color: var(--dark);
+		padding: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
-#intro .grid > .box .text {
-	position: absolute;
-	width: 100%;
-	height: 20%;
-	bottom: 0;
-	left: 0;
-	opacity: .5;
-	background: var(--black);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	transition-duration: .5s;
-	visibility: hidden;
-	opacity: 0;
-	color: var(--light);
-}
+	#banner > #right-object h1 {
+		font-size: 1.5em;
+		font-weight: 200;	
+	}
 
-#intro .grid > .box:hover .text {
-	height: 100%;
-	transition-duration: .5s;
-	visibility: visible;
-	opacity: .8;
+	#banner > #right-object .cover {
+		width: 40%;
+		height: 100%;
+		position: absolute;
+		background: var(--black);
+		opacity: .7;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		cursor: pointer;
+		transition-duration: .5s;
+		padding: 20px;
+	}
+
+	#banner > #right-object:hover .cover {
+		width: 100%;
+		opacity: 1;
+		transition-duration: 1s;
+		box-shadow: inset 0 0 5px var(--black),
+					inset 0 0 10px var(--light),
+					inset 0 0 15px var(--black);
+	}
+
+	#banner > #right-object .cover .caption {
+		color: var(--light);
+		font-family: var(--sub);
+		font-weight: 100;
+	}
+
+	#sourcecode {
+		font-size: .8em;
+		position: absolute;
+		bottom: 10%;
+		right: 5%;
+		color: var(--link);
+		text-decoration: none;
+	}
+
+	#sourcecode .fa-code {
+		visibility: hidden;
+		opacity: 0;
+	}
+
+	#sourcecode:hover {
+		transition-duration: .5s;
+		transform: rotateZ(-5deg);
+		color: var(--light);
+	}
+
+	#sourcecode:hover .fa-code {
+		visibility: visible;
+		opacity: 1;
+		transition-duration: .2s;
+	}
+
+	/***************************************************************************************************
+	*
+	*	INTRO SECTION
+	*
+	***************************************************************************************************/
+
+	#intro {
+		width: 100%;
+		height: auto;
+		background: var(--light);
+		position: relative;
+		color: var(--dark);
+		padding-top: 130px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	#intro .title {
+		color: var(--link);
+	}
+
+	#intro hr {
+		width: 50%;
+		margin: 40px;
+		color: var(--dark);
+	}
+
+	#intro > .title, #intro > .subtitle {
+		text-align: center;
+	}
+
+	#intro .sm-size-article ul {
+		list-style: none;
+		padding: 20px 0 0 80px;
+	}
+
+	#intro .sm-size-article ul li {
+		cursor: pointer;
+		margin: 20px 0;
+	}
+
+	#intro .sm-size-article ul li:hover {
+		color: var(--black);
+	}
+
+	#intro .sm-size-article ul li .fa-arrow-right a {
+		text-decoration: none;
+		color: inherit;
+		font-weight: 300;
+	}
+
+	#intro .sm-size-article ul li .fa-arrow-right {
+		visibility: hidden;
+		opacity: 0;
+		color: var(--link);
+		transition-duration: .5s;
+	}
+
+	#intro .sm-size-article ul li:hover .fa-arrow-right {
+		visibility: visible;
+		opacity: 1;
+		transition-duration: .5s;
+		margin-left: 50px;
+	}
+
+	#intro .grid {
+		width: 100%;
+		height: 500px;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-gap: 10px;
+		position: relative;
+	}
+
+	#intro .grid > .box {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+	}
+
+	#intro .grid > .box img {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 10px;
+	}
+
+	#intro .grid > .box .text {
+		position: absolute;
+		width: 100%;
+		height: 20%;
+		bottom: 0;
+		left: 0;
+		opacity: .5;
+		background: var(--black);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		transition-duration: .5s;
+		visibility: hidden;
+		opacity: 0;
+		color: var(--light);
+	}
+
+	#intro .grid > .box:hover .text {
+		height: 100%;
+		transition-duration: .5s;
+		visibility: visible;
+		opacity: .8;
+	}
 }
