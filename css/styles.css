@@ -30,6 +30,7 @@ body {
 	height: auto;
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
 	width: 100%;
 	max-width: 3000px;
 }
@@ -159,7 +160,6 @@ body {
 
 .sm-size-article {
 	font-size: 1em;
-	height: 50%;
 }
 
 .md-size-article {
@@ -172,6 +172,20 @@ body {
 
 .highlight {
 	color: var(--link);
+}
+
+.title {
+	display: block;
+	text-align: left;
+	font-size: 3em;
+	font-family: var(--main);
+}
+
+.subtitle {
+	display: block;
+	text-align: left;
+	font-size: 1.5em;
+	font-family: var(--main);
 }
 
 /***************************************************************************************************
@@ -192,6 +206,7 @@ body {
 
 #banner > .sm-size-article {
 	width: 60%;
+	height: 50%;
 	text-align: justify;
 }
 
@@ -220,7 +235,7 @@ body {
 }
 
 #banner > #right-object .cover {
-	width: 50%;
+	width: 40%;
 	height: 100%;
 	position: absolute;
 	background: var(--black);
@@ -239,14 +254,17 @@ body {
 #banner > #right-object:hover .cover {
 	width: 100%;
 	opacity: 1;
-	transition-duration: .5s;
+	transition-duration: 1s;
+	box-shadow: 0 0 5px var(--black),
+				0 0 10px var(--light),
+				0 0 15px var(--black),
+				0 0 20px var(--black);
 }
 
 #banner > #right-object .cover .caption {
 	color: var(--light);
 	font-family: var(--sub);
 	font-weight: 100;
-	backdrop-filter: blur(50px);
 }
 
 #sourcecode {
@@ -280,3 +298,115 @@ body {
 *	INTRO SECTION
 *
 ***************************************************************************************************/
+
+#intro {
+	width: 100%;
+	height: auto;
+	background: var(--light);
+	position: relative;
+	color: var(--dark);
+	padding-top: 130px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#intro .title {
+	color: var(--link);
+}
+
+#intro hr {
+	width: 50%;
+	margin: 40px;
+	color: var(--dark);
+}
+
+#intro > .title, #intro > .subtitle {
+	text-align: center;
+}
+
+#intro .sm-size-article ul {
+	list-style: none;
+	padding: 20px 0 0 80px;
+}
+
+#intro .sm-size-article ul li {
+	cursor: pointer;
+	margin: 20px 0;
+}
+
+#intro .sm-size-article ul li:hover {
+	color: var(--black);
+}
+
+#intro .sm-size-article ul li .fa-arrow-right a {
+	text-decoration: none;
+	color: inherit;
+	font-weight: 300;
+}
+
+#intro .sm-size-article ul li .fa-arrow-right {
+	visibility: hidden;
+	opacity: 0;
+	color: var(--link);
+	transition-duration: .5s;
+}
+
+#intro .sm-size-article ul li:hover .fa-arrow-right {
+	visibility: visible;
+	opacity: 1;
+	transition-duration: .5s;
+	margin-left: 50px;
+}
+
+#intro .grid {
+	width: 100%;
+	height: 500px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-gap: 10px;
+	position: relative;
+}
+
+#intro .grid > .box {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+#intro .grid > .box img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px;
+}
+
+#intro .grid > .box .text {
+	position: absolute;
+	width: 100%;
+	height: 20%;
+	bottom: 0;
+	left: 0;
+	opacity: .5;
+	background: var(--black);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	transition-duration: .5s;
+	visibility: hidden;
+	opacity: 0;
+	color: var(--light);
+}
+
+#intro .grid > .box:hover .text {
+	height: 100%;
+	transition-duration: .5s;
+	visibility: visible;
+	opacity: .8;
+}
