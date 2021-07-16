@@ -22,11 +22,18 @@ window.onload = () => {
 			const introSubTitle = document.querySelector('#intro .intro-subtitle');
 			const reflectionsTitle = document.querySelector('#reflections .title');
 			const reflectionsSubTitle = document.querySelector('#reflections .subtitle');
+			const activitiesTitle = document.querySelector('#activities .title');
+			const collections = document.querySelector('#activities .collections');
+			const activitiesContainer = document.querySelector('#activities .container');
 			window.addEventListener('scroll', () => {
 				const scrollY = window.scrollY;
+				// console.log(scrollY);
 				if (scrollY >= 300) {
 					introTitle.classList.add('slide-down');
 					introSubTitle.classList.add('slide-down');
+				} else {
+					introTitle.classList.remove('slide-down');
+					introSubTitle.classList.remove('slide-down');
 				}
 
 				if (scrollY >= 2200) {
@@ -36,8 +43,21 @@ window.onload = () => {
 				} else {
 					reflectionsTitle.classList.remove('slide');
 					reflectionsSubTitle.classList.remove('slide');
-					// console.log(scrollY);
 				}
+
+				if (scrollY >= 3900) {
+					activitiesTitle.classList.add('rotate');
+					collections.classList.add('slide');
+					activitiesContainer.classList.add('show');
+				} else {
+					activitiesTitle.classList.remove('rotate');
+					collections.classList.remove('slide');
+					activitiesContainer.classList.remove('show');
+				}
+
+
+
+
 			})
 		}
 
