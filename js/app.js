@@ -60,9 +60,36 @@ window.onload = () => {
 
 			})
 		}
+		const mainContentQuestions = () => {
+			const body = document.querySelector('body');
+			const mainContentBtn = document.querySelector('#main-content-btn');
+			const mainContent = document.querySelector('.content');
+			const closeContentBtn = document.querySelector('#close-content-btn');
+			const questionsBtn = document.querySelectorAll('.content .question-btn');
+
+			mainContentBtn.addEventListener('click', () => {
+				mainContent.classList.add('open');
+				body.style.overflow = 'hidden';
+			})
+
+			Array.from(questionsBtn).forEach(button => {
+				button.addEventListener('click', e => {
+					const answer = e.target.parentNode.children[1];
+					answer.classList.toggle('show');
+					button.classList.toggle('btn-toggle');
+				})
+			})
+
+			closeContentBtn.addEventListener('click', () => {
+				mainContent.classList.remove('open');
+				body.style.overflow = 'auto';
+			})
+		}
+
 
 		mainNavFunction();
 		displayViewingDelay();
+		mainContentQuestions();
 	}
 
 	const w1200down = () => {
