@@ -24,7 +24,7 @@ window.onload = () => {
 			const reflectionsSubTitle = document.querySelector('#reflections .subtitle');
 			window.addEventListener('scroll', () => {
 				const scrollY = window.scrollY;
-				if (scrollY >= 300 && scrollY <= 1000) {
+				if (scrollY >= 300) {
 					introTitle.classList.add('slide-down');
 					introSubTitle.classList.add('slide-down');
 				}

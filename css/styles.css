@@ -229,19 +229,181 @@ body {
 		padding-top: 150px;
 	}
 
+	/* SVGs START */
+
+	#banner #moon {
+		z-index: 1;
+		width: 20em;
+		height: 20em	;
+		position: absolute;
+		top: 20%;
+		left: -15%;
+		opacity: .2;
+		animation: moon 1.5s linear infinite;
+	}
+
+	#banner #sattelite {
+		z-index: 1;
+		width: 5em;
+		height: 5em	;
+		position: absolute;
+		top: 35%;
+		left: 15%;
+		opacity: .9;
+		transform: rotateZ(-130deg);
+		animation: sattelite 3s linear infinite;
+		animation-direction: reverse;
+	}
+
+	#banner #comet1 {
+		z-index: 1;
+		width: 5em;
+		height: 5em	;
+		position: absolute;
+		top: 20%;
+		right: 15%;
+		opacity: .8;
+		transform: rotateZ(340deg);
+		animation: comet1 1.5s linear infinite;
+		animation-fill-mode: forwards;
+		animation-delay: 2s;
+	}
+
+	#banner #comet2 {
+		z-index: 1;
+		width: 1em;
+		height: 1em	;
+		position: absolute;
+		top: 10%;
+		right: 30%;
+		opacity: .8;
+		transform: rotateZ(340deg);
+		animation: comet2 2s linear infinite;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes comet1 {
+		0% {
+			top: 20%;
+			right: 15%;
+			opacity: .8;
+		}
+
+		25% {
+			opacity: .6;
+		}
+
+		45% {
+			opacity: 1;
+		}
+
+		50% {
+			opacity: .4;
+		}
+
+		65% {
+			opacity: .8;
+		}
+
+		75% {
+			opacity: .2;
+		}
+
+		100% {
+			top: 80%;
+			right: 90%;
+			opacity: 0;
+		}
+	}
+
+	@keyframes comet2 {
+		0% {
+			top: 10%;
+			right: 30%;
+			opacity: .8;
+		}
+
+		25% {
+			opacity: .6;
+		}
+
+		45% {
+			opacity: 1;
+		}
+
+		50% {
+			opacity: .4;
+		}
+
+		65% {
+			opacity: .8;
+		}
+
+		75% {
+			opacity: .2;
+		}
+
+		100% {
+			top: 90%;
+			right: 100%;
+			opacity: 0;
+		}
+	}
+
+	@keyframes moon {
+		0% {
+			top: 20%;
+		}
+
+		50% {
+			top: 21%;
+		}
+
+		100% {
+			top: 20%;
+		}
+	}
+
+	@keyframes sattelite {
+		0% {
+			top: 46%;
+			left: 15%;
+			transform: rotateZ(-130deg);
+		}
+
+		50% {
+			top: 48%;
+			left: 15%;
+			transform: rotateZ(-140deg);
+		}
+
+		100% {
+			top: 46%;
+			left: 15%;
+			transform: rotateZ(-130deg);
+		}
+	}
+
+	/* SVGs END */
+
 	#banner > .sm-size-article {
+		position: relative;
+		z-index: 2;
 		width: 60%;
 		height: 50%;
 		text-align: justify;
 	}
 
 	#banner > .lg-size-article {
+		position: relative;
+		z-index: 2;
 		font-family: var(--sub);
 		letter-spacing: 5px;
 	}
 
 	#banner > #right-object {
 		position: absolute;
+		z-index: 2;
 		top: 120px;
 		right: 5%;
 		background: var(--light);
@@ -371,6 +533,10 @@ body {
 		margin: 10px 0;
 	}
 
+	#intro .sm-size-article {
+		max-width: 1500px;
+	}
+
 	#intro .sm-size-article ul {
 		list-style: none;
 		padding: 20px 0 0 80px;
@@ -407,6 +573,7 @@ body {
 
 	#intro .grid {
 		width: 100%;
+		max-width: 1500px;
 		height: 500px;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -489,16 +656,17 @@ body {
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: auto;
 		width: 100%;
+		max-width: 1500px;
 		height: auto;
 		margin: 50px auto;
 		position: relative;
-		padding: 20px;
+		padding: 50px;
 	}
 
 	#reflections #images .image {
 		position: relative;
 		transition-duration: .5s;
-		height: 400px;
+		height: 300px;
 	}
 
 	#reflections #images .image img {
@@ -538,7 +706,7 @@ body {
 	#reflections #images .image:hover div {
 		height: 100%;
 		visibility: visible;
-		opacity: 1;
+		opacity: .8;
 		transition-duration: .5s;
 	}
 
