@@ -186,10 +186,12 @@ body {
 		user-select: none;
 		margin: 0 5px;
 		font-weight: 600;
+		font-size: 3rem;
 	}
 
 	.main-nav-list li #main-content-btn {
 		padding: 10px;
+		margin: 0 20px;
 		width: 100px;
 		border: 2px solid var(--dark);
 		background: var(--dark);
@@ -204,6 +206,8 @@ body {
 	}
 
 	.main-nav-list ul li .fa-vector-square {
+		font-size: 80%;
+		padding: 20px;
 		visibility: hidden;
 		opacity: 0;
 		transition-duration: .2s;
@@ -230,6 +234,10 @@ body {
 	}
 
 	.main-nav-list ul li a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
 		text-decoration: none;
 		color: inherit;
 	}
@@ -932,6 +940,7 @@ body {
 
 	#reflections #images {
 		display: grid;
+		grid-gap: 20px;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: auto;
 		width: 100%;
@@ -964,8 +973,8 @@ body {
 		visibility: hidden;
 		opacity: 0;
 		cursor: pointer;
-		background: var(--light);
-		color: var(--black);
+		background: var(--black);
+		color: var(--light);
 		font-family: var(--sub);
 		padding: 20px;
 		display: flex;
