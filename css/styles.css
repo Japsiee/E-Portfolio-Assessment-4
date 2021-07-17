@@ -608,10 +608,10 @@ body {
 		z-index: 2;
 		top: 150px;
 		right: 5%;
-		background: var(--light);
+		background: transparent;
 		width: 500px;
 		height: 250px;
-		color: var(--dark);
+		color: var(--light);
 		padding: 20px;
 		display: flex;
 		justify-content: center;
@@ -621,29 +621,30 @@ body {
 	#banner > #right-object #time {
 		font-family: var(--main);
 		font-size: 3em;
-		border: 2px solid var(--dark);
+		border: 2px solid var(--light);
 		padding: 40px;
+		border-radius: 10px;
+	}
+
+	#banner > #right-object #date, #banner > #right-object #local {
+		background: var(--dark);
+		color: var(--light);
+		padding: 10px;
 		border-radius: 10px;
 	}
 
 	#banner > #right-object #date {
 		font-family: var(--main);
 		position: absolute;
-		top: 5%;
-		left: 3%;
-		background: var(--light);
-		color: var(--dark);
-		padding: 10px;
+		top: 2%;
+		left: 8%;
 	}
 
 	#banner > #right-object #local {
 		position: absolute;
 		font-family: var(--main);
-		bottom: 5%;
-		right: 3%;
-		background: var(--light);
-		color: var(--dark);
-		padding: 10px;
+		bottom: 2%;
+		right: 8%;
 	}
 
 	#banner > #right-object .cover {
@@ -659,14 +660,14 @@ body {
 		left: 0;
 		opacity: 0;
 		cursor: pointer;
-		transition-duration: .5s;
+		transition-duration: .2s;
 		padding: 20px;
 	}
 
 	#banner > #right-object:hover .cover {
 		width: 100%;
 		opacity: 1;
-		transition-duration: 1s;
+		transition-duration: .5s;
 	}
 
 	#banner > #right-object .cover .caption {
