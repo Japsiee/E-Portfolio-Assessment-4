@@ -1,5 +1,69 @@
 window.onload = () => {
 	const w1200up = () => {
+		const clock = () => {
+			const clockContainer = document.querySelector('#time');
+			const dateContainer = document.querySelector('#date');
+			const today = new Date();
+
+			const mt = today.getMonth() + 1;
+			let month;
+			const day = today.getDay() + 1;
+			const year = today.getFullYear();
+
+			const hr = today.getHours();
+			const mn = today.getMinutes();
+			const sc = today.getSeconds();
+
+			switch (mt) {
+				case 1:
+					month = 'January';
+					break;
+				case 2:
+					month = 'February';
+					break;
+				case 3:
+					month = 'March';
+					break;
+				case 4:
+					month = 'April';
+					break;
+				case 5:
+					month = 'May';
+					break;
+				case 6:
+					month = 'June';
+					break;
+				case 7:
+					month = 'July';
+					break;
+				case 8:
+					month = 'August';
+					break;
+				case 9:
+					month = 'September';
+					break;
+				case 10:
+					month = 'October';
+					break;
+				case 11:
+					month = 'November';
+					break;
+				case 12:
+					month = 'December';
+					break;
+				default:
+					month = 'unset';
+					break;
+			}
+
+			function setZero(n) {
+				return n < 10 ? '0'+n : n;
+			}
+
+			dateContainer.innerHTML = `${month} ${setZero(day)}, ${year}`;
+			clockContainer.innerHTML = `${setZero(hr)}:${setZero(mn)}:${setZero(sc)}`;
+			setTimeout(clock, 1000);
+		}
 		const mainNavFunction = () => {
 			const mainNav = document.querySelector('.main-nav');
 			const mainNavBtn = document.querySelector('.main-nav-btn');
@@ -86,7 +150,7 @@ window.onload = () => {
 			})
 		}
 
-
+		clock();
 		mainNavFunction();
 		displayViewingDelay();
 		mainContentQuestions();

@@ -618,9 +618,32 @@ body {
 		align-items: center;
 	}
 
-	#banner > #right-object h1 {
-		font-size: 1.5em;
-		font-weight: 200;	
+	#banner > #right-object #time {
+		font-family: var(--main);
+		font-size: 3em;
+		border: 2px solid var(--dark);
+		padding: 40px;
+		border-radius: 10px;
+	}
+
+	#banner > #right-object #date {
+		font-family: var(--main);
+		position: absolute;
+		top: 5%;
+		left: 3%;
+		background: var(--light);
+		color: var(--dark);
+		padding: 10px;
+	}
+
+	#banner > #right-object #local {
+		position: absolute;
+		font-family: var(--main);
+		bottom: 5%;
+		right: 3%;
+		background: var(--light);
+		color: var(--dark);
+		padding: 10px;
 	}
 
 	#banner > #right-object .cover {
