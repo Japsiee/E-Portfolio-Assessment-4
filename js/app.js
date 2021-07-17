@@ -7,7 +7,7 @@ window.onload = () => {
 
 			const mt = today.getMonth() + 1;
 			let month;
-			const day = today.getDay() + 1;
+			const date = today.getDate();
 			const year = today.getFullYear();
 
 			const hr = today.getHours();
@@ -60,7 +60,7 @@ window.onload = () => {
 				return n < 10 ? '0'+n : n;
 			}
 
-			dateContainer.innerHTML = `${month} ${setZero(day)}, ${year}`;
+			dateContainer.innerHTML = `${month} ${setZero(date)}, ${year}`;
 			clockContainer.innerHTML = `${setZero(hr)}:${setZero(mn)}:${setZero(sc)}`;
 			setTimeout(clock, 1000);
 		}
