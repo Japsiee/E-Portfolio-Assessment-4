@@ -81,7 +81,11 @@ body {
 	font-family: var(--main);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1100px) {
+
+	.sorry {
+		display: none;
+	}
 
 	::-webkit-scrollbar {
 		width: 10px;
@@ -267,7 +271,7 @@ body {
 		background: var(--dark);
 		color: var(--black);
 		backdrop-filter: blur(50px);
-		overflow-y: scroll;
+		overflow-y: auto;
 		font-family: var(--sub);
 	}
 
@@ -321,24 +325,29 @@ body {
 	}
 
 	.content .box .answer {
-		visibility: hidden;
-		opacity: 0;
-		margin-top: -150px;
+		display: none;
 
 		font-size: 1em;
 		padding: 10px 0;
 		text-align: justify;
 		font-size: 80%;
-		transition-duration: .5s;
 		z-index: 1;
 		color: var(--light);
 	}
 
 	.content .box .show {
-		visibility: visible;
-		opacity: 1;
-		margin-top: 0;
-		transition-duration: .5s;
+		display: block;
+	}
+
+	.content .box .answer > img {
+		width: 100%;
+		height: auto;
+		max-height: 400px;
+		padding: 40px;
+	}
+
+	.content .box .answer a {
+		color: var(--link);
 	}
 
 	/***************************************************************************************************
@@ -591,7 +600,7 @@ body {
 		position: relative;
 		z-index: 2;
 		width: 60%;
-		height: 50%;
+		height: 40%;
 		text-align: justify;
 	}
 
@@ -624,6 +633,7 @@ body {
 		border: 2px solid var(--light);
 		padding: 40px;
 		border-radius: 10px;
+		color: var(--link);
 	}
 
 	#banner > #right-object #date, #banner > #right-object #local {
@@ -1082,4 +1092,20 @@ body {
 
 	
 	
+}
+
+@media screen and (max-width: 1099px) {
+	body > * {
+		display: none;
+	}
+	.sorry {
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		font-size: 2em;
+		font-family: var(--main);
+		font-weight: 400;
+		justify-content: center;
+		align-items: center;
+	}
 }

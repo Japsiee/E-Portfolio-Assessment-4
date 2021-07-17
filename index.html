@@ -10,6 +10,9 @@
 	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+	<div class="sorry">
+		Sorry it's not yet mobile responsive
+	</div>
 	<header class='main-nav'>
 		<span class='main-nav-btn'><i class="fas fa-location-arrow"></i>&nbsp;&nbsp;Navigation Area &nbsp;<i class="fas fa-chess-rook"></i></span>
 		<nav class='main-nav-list'>
@@ -28,25 +31,98 @@
 			<h1 class='title'>Main Content</h1>
 			<article class='questions'>
 				<p class='question-btn'>What is OOP <i class="fas fa-angle-down"></i></p>
-				<p class="answer">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
+				<div class="answer">
+					<p><span class='highlight'>Object-oriented programming</span> (OOP) is a software programming model constructed around objects. This model compartmentalizes data 		into objects (data fields) and describes object contents and behavior through the declaration of classes (methods).	
+					</p>
+					<br>
+					<p>OOP features include the following:	
+						a)	<span class='highlight'>Encapsulation</span>: This makes the program structure easier to manage because each object’s implementation and state are hidden behind well-defined boundaries.
+						b)	<span class='highlight'>Polymorphism</span>: This means abstract entities are implemented in multiple ways.
+						c)	<span class='highlight'>Inheritance</span>: This refers to the hierarchical arrangement of implementation fragments.
+						Object-oriented programming allows for simplified programming. Its benefits include reusability, refactoring, extensibility, maintenance and efficiency.
+					</p>
+				</div>
 			</article>
 			<article class='questions'>
 				<p class='question-btn'>What are the four basic OOP and examples <i class="fas fa-angle-down"></i></p>
-				<p class="answer">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
+				<div class="answer">
+					<p>There are 4 major concepts that make an Object Oriented. These are Encapsulation, Abstraction, Polymorphism and Inheritance. 	These are also called as 4 pillars of Object-Oriented Programming (OOP).
+					</p>
+					<img src="img/1.png">
+					<p><span class='highlight'>Encapsulation</span> is the mechanism of hiding of data implementation by restricting access to public methods. Instance variables are kept private and accessor methods are made public to achieve this. Look at the example below:</p>	
+					<img src="img/2.png">
+					<p>The public setXXX() and getXXX() methods are the access points of the instance variables of the EncapTest class. Normally, these methods are referred as getters and setters. Therefore, any class that wants to access the variables should access them through these getters and setters. Output below:</p>
+					<img src="img/3.png">
+					<p><span class='highlight'>Abstraction</span> is the concept of object-oriented programming that "shows" only essential attributes and "hides" unnecessary information. The main purpose of abstraction is hiding the unnecessary details from the users. Abstraction is selecting data from a larger pool to show only relevant details of the object to the user. It helps in reducing programming complexity and efforts. This section provides you an example of the abstract class. To create an abstract class, just use the abstract keyboard before the class keyword, in the class declaration. Declaration and Output below:</p>
+					<img src="img/4.png">
+					<img src="img/5.png">
+					<p><span class='highlight'>Polymorphism</span> is derived from 2 Greek words: poly and morphs. The word “poly” means many and “morphs” means forms. So, polymorphism means many forms. It is also the ability of an object to take many forms. To simply put, polymorphism in java allows us to perform the same action in many different ways. Any Java object that can pass more than one IS-A test is considered to be polymorphic and in java, all the java objects are polymorphic as it has passed the IS-A test for their own type and for the class Object. Let’s say we have a class Animal that has a method sound(). Since this is a generic class so we can’t give it an implementation like: Roar, Meow, Oink etc. We had to give a generic message.</p>	
+					<img src="img/6.png">
+					<p>Now let’s say we have two subclasses of Animal class: Horse and Cat that extend Animal Class. We can provide the implementation to the same like this: </p>
+					<img src="img/7.png">
+					<p>and</p>
+					<img src="img/8.png">
+					<p>As you can see that although we had the common action for all subclasses sound() but there were different ways to do the same action. This is a perfect example of polymorphism (features that allows us to perform a single action in different ways).</p>
+					<br>
+					<p><strong>Types of Polymorphism</strong></p>
+					<br>
+					<p>Polymorphism in Java can be performed by two different methods</p>
+					<img src="img/9.png">
+
+					<p><span class='highlight'>1. Static Polymorphism</span> also known as compile time polymorphism – Method Overloading in java is an example of compile time (or static polymorphism). </p>
+					<br>
+					<p><strong>Method Overloading</strong> - is defined as a process that can create multiple methods of the same name in the same class, and all the methods work in different ways. Method overloading occurs when there is more than one method of the same name in the class. Example below:</p>
+					<br>
+					<p>Overload.java</p>
+					<img src="img/10.png">
+					<p>MethodOverloading.java</p>
+					<img src="img/11.png">
+					<p>Here the method demo() is overloaded 3 times: first method has int parameter, second method has 2 int parameter and third one is having double parameter which method is to be called is determined by the arguments we pass while calling methods. This happens at compile time so this type of polymorphism is known as compile polymorphism. Output below:</p>
+					<img src="img/12.png">
+
+					<p><span class='highlight'>2.	Dynamic Polymorphism </span>also known as runtime polymorphism - is a process in which a call to an overridden method is resolved at runtime, that’s why it is called runtime polymorphism. Method Overriding in Java is example of runtime time (or dynamic polymorphism)</p>
+					<br>
+					<p><strong>Method Overriding</strong> - is defined as a process when the subclass or a child class has the same method as declared in the parent class. Example below:</p>
+					<br>
+					<p>Animal.java</p>
+					<img src="img/13.png">
+					<p>Horse.java</p>
+					<img src="img/14.png">
+					<br>
+					<p>Output:</p>
+					<img src="img/15.png">
+
+					<p>Cat.java</p>
+					<img src="img/16.png">
+					<br>
+					<p>Output:</p>
+					<img src="img/17.png">
+
+					<p>For more information about this visit this <a href="https://www.sitesbay.com/java/java-polymorphism" title="https://www.sitesbay.com/java/java-polymorphism">link</a></p>
+
+					<p><span class='highlight'>Inheritance</span> is the mechanism in java by which one class is allowed to inherit the features (fields and methods) of another class. In this example, you can observe two classes namely Calculation and My_Calculation. Using extends keyboard, the My_Calculation inherits the methods addition() and Subtraction() of Calculation class.</p>
+
+					<img src="img/18.png">
+					<p>After executing the program, it will produce the following result</p>
+					<img src="img/19.png">
+
+					<p><strong>Types of inheritance in Java</strong></p>
+					<img src="img/20.png">
+					<p><strong>References</strong></p>
+					<br>
+					<p><a href="https://www.geeksforgeeks.org/inheritance-in-java/#:~:text=Inheritance%20is%20an%20important%20pillar,and%20methods)%20of%20another%20class.&text=The%20subclass%20can%20add%20its,the%20superclass%20fields%20and%20methods.">First Reference</a></p>
+					<p><a href="https://beginnersbook.com/2013/04/runtime-compile-time-polymorphism/">Second Reference</a></p>
+					<p><a href="https://www.mygreatlearning.com/blog/polymorphism-in-java/#:~:text=Polymorphism%20in%20Java%20is%20the,object%20to%20take%20many%20forms.&text=Any%20Java%20object%20that%20can,and%20for%20the%20class%20Object">Third Reference</a></p>
+					<p><a href="https://www.guru99.com/java-data-abstraction.html#:~:text=What%20is%20Abstraction%20in%20OOP,unnecessary%20details%20from%20the%20users"></a></p>
+					<p><a href="https://medium.com/@cancerian0684/what-are-four-basic-principles-of-object-oriented-programming-645af8b43727">Fourth Reference</a></p>
+					<p><a href="https://www.tutorialspoint.com/java/java_encapsulation.htm">Fifth Reference</a></p>
+					<p><a href="https://beginnersbook.com/2013/03/polymorphism-in-java/#:~:text=Polymorphism%20is%20one%20of%20the,Roar%2C%20Meow%2C%20Oink%20etc">Sixth Reference</a></p>
+					<p><a href="https://www.techopedia.com/definition/3235/object-oriented-programming-oop">Seventh Reference</a></p>
+
+					
+
+					
+				</div>
 			</article>
 			<article class='questions'>
 				<p class='question-btn'>Object-Oriented Requirements Models <i class="fas fa-angle-down"></i></p>
