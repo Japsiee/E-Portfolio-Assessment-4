@@ -1,5 +1,5 @@
 window.onload = () => {
-	const w1200up = () => {
+	const w1100up = () => {
 		const clock = () => {
 			const clockContainer = document.querySelector('#time');
 			const dateContainer = document.querySelector('#date');
@@ -156,21 +156,21 @@ window.onload = () => {
 		mainContentQuestions();
 	}
 
-	const w1200down = () => {
-		console.log('width is less than 1200');
+	const w1100down = () => {
+		console.log('width is less than 1100');
 	}
 
-	if (window.outerWidth >= 1200) {
-		w1200up();
+	if (window.outerWidth >= 1100) {
+		w1100up();
 	} else {
-		w1200down();
+		w1100down();
 	}
 
 	window.addEventListener('resize', () => {
-		if (window.outerWidth >= 1200) {
-			w1200up();
+		if (window.outerWidth >= 1100) {
+			w1100up();
 		} else {
-			w1200down();
+			w1100down();
 		}
 	})
 

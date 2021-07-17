@@ -184,7 +184,7 @@ body {
 
 	.main-nav-list ul li {
 		user-select: none;
-		margin: 0 20px;
+		margin: 0 5px;
 		font-weight: 600;
 	}
 
@@ -676,6 +676,7 @@ body {
 
 	#banner > #right-object:hover .cover {
 		width: 100%;
+		height: 100%;
 		opacity: 1;
 		transition-duration: .5s;
 	}
@@ -689,6 +690,7 @@ body {
 	#sourcecode {
 		font-size: .8em;
 		position: absolute;
+		padding: 10px;
 		bottom: 10%;
 		right: 5%;
 		color: var(--link);
@@ -702,7 +704,6 @@ body {
 
 	#sourcecode:hover {
 		transition-duration: .5s;
-		transform: rotateZ(-5deg);
 		color: var(--light);
 	}
 
@@ -1089,8 +1090,122 @@ body {
 		transition-delay: .5s;
 	}
 
+	/***************************************************************************************************
+	*
+	*	TEAM PAGE SECTION
+	*
+	***************************************************************************************************/
 
-	
+	.headspace {
+		width: 100%;
+		background: var(--dark);
+		padding-top: 130px;
+		color: var(--light);
+	}
+
+	.headspace .title {
+		text-align: center;
+		padding: 50px;
+	}
+
+	#team {
+		padding: 20px;
+		width: 100%;
+		height: auto;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: auto;
+		grid-gap: 40px;
+	}
+
+	#team .sm-size-article {
+		position: relative;
+		padding: 20px;
+		font-family: var(--main);
+		height: auto;
+		cursor: pointer;
+		border: 5px solid var(--light);
+		color: var(--dark);
+		line-height: 150%;
+		transition-duration: .5s;
+	}
+
+	#team .slide-down-btn {
+		position: absolute;
+		top: 5%;
+		right: 5%;
+		color: var(--dark);
+		transition-duration: .2s;
+	}
+
+	#team .slide-down-btn:hover {
+		color: var(--link);
+	}
+
+	#team .sm-size-article p:nth-child(1) {
+		font-weight: 700;
+	}
+
+	#team .sm-size-article p:nth-child(2) {
+		font-size: 60%;
+		font-weight: 300;
+		font-family: var(--main);
+	}
+
+	#team .sm-size-article em {
+		display: block;
+		width: 80%;
+		color: var(--dark);
+	}
+
+	#team .sm-size-article:hover {
+		border-left: 5px solid var(--link);
+		transition-duration: .5s;
+		color: var(--link);
+	}
+
+	#team .sm-size-article .cv {
+		position: absolute;
+		color: var(--light);
+		background: var(--link);
+		padding: 10px;
+		font-size: 100%;
+		text-decoration: none;
+		border-radius: 5px;
+		width: 20%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		top: 0;
+		right: 5%;
+		visibility: hidden;
+		opacity: 0;
+		transition-duration: .5s;
+	}
+
+	#team .sm-size-article .show {
+		top: 50%;
+		visibility: visible;
+		opacity: 1;
+		transition-duration: .5s;
+	}
+
+	#team .sm-size-article .cv:hover {
+		background: var(--dark);
+		transition-duration: .5s;
+	}
+
+	#search-name {
+		width: 40%;
+		padding: 20px;
+		font-size: 1em;
+		margin: 25px;
+		color: var(--dark);
+		border: 2px solid var(--light);
+		background: lightgrey;
+		border-radius: 10px;
+	}
 	
 }
 
@@ -1109,3 +1224,4 @@ body {
 		align-items: center;
 	}
 }
+
