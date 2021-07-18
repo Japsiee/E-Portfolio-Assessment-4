@@ -34,14 +34,14 @@ window.onload = () => {
 		console.log('width is less than 1100');
 	}
 
-	if (window.outerWidth >= 1100) {
+	if (window.outerWidth >= 800) {
 		w1100up();
 	} else {
 		w1100down();
 	}
 
 	window.addEventListener('resize', () => {
-		if (window.outerWidth >= 1100) {
+		if (window.outerWidth >= 800) {
 			w1100up();
 		} else {
 			w1100down();

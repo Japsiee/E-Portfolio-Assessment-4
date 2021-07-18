@@ -134,40 +134,40 @@ window.onload = () => {
 			mainContentBtn.addEventListener('click', () => {
 				mainContent.classList.add('open');
 				body.style.overflow = 'hidden';
-			})
 
-			Array.from(questionsBtn).forEach(button => {
-				button.addEventListener('click', e => {
-					const answer = e.target.parentNode.children[1];
-					answer.classList.toggle('show');
-					button.classList.toggle('btn-toggle');
+				Array.from(questionsBtn).forEach(button => {
+					button.addEventListener('click', e => {
+						const answer = e.target.parentNode.children[1];
+						answer.classList.toggle('show');
+						button.classList.toggle('btn-toggle');
+					})
 				})
-			})
 
-			closeContentBtn.addEventListener('click', () => {
-				mainContent.classList.remove('open');
-				body.style.overflow = 'auto';
+				closeContentBtn.addEventListener('click', () => {
+					mainContent.classList.remove('open');
+					body.style.overflow = 'auto';
+				})
 			})
 		}
 
-		clock();
 		mainNavFunction();
 		displayViewingDelay();
 		mainContentQuestions();
+		clock();
 	}
 
 	const w1100down = () => {
 		console.log('width is less than 1100');
 	}
 
-	if (window.outerWidth >= 1100) {
+	if (window.outerWidth >= 800) {
 		w1100up();
 	} else {
 		w1100down();
 	}
 
 	window.addEventListener('resize', () => {
-		if (window.outerWidth >= 1100) {
+		if (window.outerWidth >= 800) {
 			w1100up();
 		} else {
 			w1100down();
