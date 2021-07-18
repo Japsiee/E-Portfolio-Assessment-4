@@ -14,7 +14,7 @@
 		Sorry, required of higher than 1100 pixels width to view the site
 	</div>
 	<header class='main-nav'>
-		<span class='main-nav-btn'><i class="fas fa-location-arrow"></i>&nbsp;&nbsp;Navigation Area &nbsp;<i class="fas fa-chess-rook"></i></span>
+		<span class='main-nav-btn'><i class="fas fa-location-arrow"></i>&nbsp;&nbsp;Table of Content &nbsp;<i class="fas fa-chess-rook"></i></span>
 		<nav class='main-nav-list'>
 			<ul>
 				<li><a href="team.html" title="Our Team"><i class="fas fa-vector-square"></i> <i class="fas fa-users"></i></a></li>
@@ -187,10 +187,7 @@
 		</article>
 		<article class="sm-size-article">
 			<h2 class='subtitle boxhighlight'>Services We Can Offer</h2>
-			<p>Dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud <span class='highlight'>exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit</span> in voluptate velit esse
-			cillum dolore eu fugiat nulla pariatur. You can see the services we offer below: </p>
+			<p>Over the past few years, IoT has become one of the most important technologies of the 21st century. Now that we can <span class='highlight'>connect everyday</span> objects—kitchen appliances, cars, thermostats, baby monitors—to the internet via embedded devices, seamless communication is possible between people, processes, and things and speaking of you can see services we offer below: </p>
 			<ul>
 				<li><i class="fas fa-bookmark"></i> Portfolio Website&nbsp;&nbsp;<i class="fas fa-arrow-right">&nbsp;&nbsp;<a href="#" title="">View Projects</a></i></li>
 				<li><i class="fab fa-blogger"></i> Blog Website&nbsp;&nbsp;<i class="fas fa-arrow-right">&nbsp;&nbsp;<a href="#" title="">View Projects</a></i></li>
@@ -242,9 +239,8 @@
 			<div class='image'>
 				<img src="img/Optimized-img1.jpg" alt="">
 				<div>
-					<h1>Reflection 1</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et</p>
+					<h1>OOP</h1>
+					<p>Object Oriented Programming is a very wide concept of programming thats why it is really fun while coding because you can use inheritance, this feature can let you reuse your code anytime.</p>
 				</div>
 			</div>
 			<div class='image'>
@@ -324,23 +320,640 @@
 	<section id="activities">
 		<h1 class='title rotate'>Our Activities</h1>
 		<section class='activity'>
-			<h2 class='subtitle collections'>Collections</h2>
+			<h2 class='subtitle collections'>Collection of Activities and Exercises</h2>
 			<div class='container'>
 				<article class='sm-size-article'>
-					<h3>Activity 1</h3>
-					<img src="img/code2.png" alt="">
-					<p>Ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<h3>Exercise 1</h3>
+					<p>Write a program that replies either Leap Year or Not a Leap Year, given a year. It is a leap year if the year is divisible by 4 but not by 100 (for example, 1796 is a leap year because it is divisible by 4 but not by 100). A year that is divisible by both 4 and 100 is a leap year if it is also divisible by 400 (for example, 2000 is a leap year, but 1800 is not).</p>
+					<textarea class="code" disabled>
+import java.util.Scanner;
+public class LeapYear {
+   public static void main(String[] args){
+      int year;
+      System.out.println("Enter an Year :: ");
+      Scanner sc = new Scanner(System.in);
+      year = sc.nextInt();
+
+      if (((year % 4 == 0) && (year % 100!= 0)) || (year%400 == 0))
+         System.out.println("Specified year is a leap year");
+      else
+         System.out.println("Specified year is not a leap year");
+   }
+}						
+					</textarea>
+					<p></p>
 				</article>
 				<article class='sm-size-article'>
-					<h3>Activity 2</h3>
-					<img src="img/code1.png" alt="">
-					<p>Ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<h3>Exercise 2</h3>
+					<p>Employees at MyJava Lo-Fat Burgers earn the basic hourly wage of $7.25. They will receive time-and-a-half of their basic rate for overtime hours. In addition, they will receive a commission on the sales they generate while tending the counter.</p>
+					<textarea class="code" disabled>
+import java.util.*;
+
+public class codex {
+	public static void main(String[] args) {
+	Scanner scan = new Scanner(System.in);
+
+	//hourly wage
+	System.out.print("How many hours did you work?");
+		float hours = scan.nextFloat();
+		float hrwage = 7.25f;
+	hours = hrwage * hours;
+	System.out.println("This is your regular hourly wage: $"+hours);
+	System.out.println("\n===============================================\n");
+	
+	//overtime wage	
+	System.out.print("How many hours in your over time did you work?");
+		float ot = scan.nextFloat();
+		float otpay = 10.875f;
+	ot = ot * otpay;
+	System.out.println("This is your pay for overtime: $"+ot);
+	System.out.println("\n===============================================\n");
+	//Commission sales
+	System.out.println("How much sales did you do?");
+		float sales = scan.nextFloat();
+		double commission = 0;
+	if (sales >= 1 && sales <=99.99) {
+		commission = sales * 0.05;
+		System.out.println("This is your Commission: $"+commission);
+	} else if (sales >= 100.00 && sales <=299.99) {
+		commission = sales * 0.1;
+		System.out.println("This is your Commission: $"+commission);
+	} else if (sales >= 300.00) {
+		commission = sales * 0.15;
+		System.out.println("This is your Commission: $"+commission);
+	}
+	System.out.println("\n===============================================\n");
+		float total = 0;
+	total =  (float) (hours + ot + commission);
+	System.out.println("This is your total payment: $"+total);
+	}
+}
+					</textarea>
+					<p>The hourly wage of an employee is $7.25, so they will enter the hours of they work to get the "hours" variable. For the overtime payment, the given said that "time-and-a-half of their basic rate" so basically it is $7.25 * 50% is equals to $10.875, so input the overtime hours that that you did and you will get the  "ot". The last one is sales, we used if else statement because for the first commission fee is if you did $1 to $99.99 of the sales you will get 5% for the commission, $100 of sales to $299.99 of sales will give you 10% for the commission, and more than $300 of sales will give you 15% for the commission. The last is just an output of everything that you earn</p>
+				</article>
+				<article class='sm-size-article'>
+					<h3>Activity 1.A</h3>
+						<p>CRITICAL THINKING EXERCISE: Imagine that you and your band have just recorded a
+						song, and you want to permit fans to purchase and download the song over the Internet.
+						Your manager receives a commission equal to 12% of the total sales revenue for your
+						song. and the Internet site that list your song receives a 3% commission. Using a
+						CLASS DIAGRAM, design your SUB CLASS.
+						THEN design a Java Program that ask for the title of the song, the purchase price of
+						the song (in peso and cents), and the number of copies of the song that have been
+						sold. Calculate the total revenue generated by your song, the commission received by
+						your manager, and the commission received by the Internet site.
+						Write your design to the following space. Your design should be 1 Class Diagram and
+						a list of Java Comments without any codes
+						</p>
+					<textarea class="code">
+SongSales
+__________________________________________________________
+
+titleru :String
+pricure : double
+solding : int
+revenew : double
+managinger : double
+interneto : double
+
+__________________________________________________________
+
+compute()
+display()
+
+1 A Second Box
+
+SubClass
+__________________________________________________________
+
+//Variables
+
+titleru : String
+pricure : double
+solding : int
+revenew : double
+managinger : double
+interneto : double
+
+__________________________________________________________
+
+//Methods
+
+compute()
+revenew=pricure*solding
+managinger=revenew*0.12
+interneto=revenew*0.03
+
+display()
+titleru
+revenew
+manager's commission
+site's commission
+
+					</textarea>
+				</article>
+				<article class='sm-size-article'>
+					<h3>Activity 1.B</h3>
+						<p>Write a Java program based on the design you created in 1.A. Name the Java program 
+						SongSales.java</p>		
+					<textarea class="code">
+package SongSales;
+
+public class SongSales {
+ static SubClass wangy = new SubClass();
+
+ public static void main(String[] args){
+ System.out.print("Title of the Song: ");
+ wangy.titleru = wangy.scan.next();
+ System.out.print("Price of the Goody Song: ");
+ wangy.pricure = wangy.scan.nextDouble();
+ System.out.print("Sold Copies of the Song: ");
+ wangy.solding = wangy.scan.nextInt();
+
+ wangy.compute(); wangy.display();
+ }
+}
+
+package SongSales;
+import java.util.*;
+public class SubClass {
+ public String titleru;
+ public int solding;
+ public double pricure, revenew, managingerr, interneto;
+ public Scanner scan = new Scanner(System.in);
+
+ public void compute(){
+ revenew = pricure * solding;
+ managinger = revenew * 0.12;
+ interneto = revenew * 0.03;
+ }
+
+ public void display(){
+ System.out.println("Song Title: " + titleru);
+ System.out.println("Total Revenue: " + revenew);
+ System.out.println("Manager's Commission : " + managinger);
+ System.out.println("Site's Commission : " + interneto);
+ }
+}
+
+					</textarea>
+				</article>
+				<article class='sm-size-article'>
+					<h3>Activity 2.A</h3>
+						<p>Redesign the program SongSales.java, which you created in 1.A. Use a dialog box 
+						to ask the user for the title of the song, the purchase price of the song (in peso 
+						and cents), and the number of copies of the song that have been sold. Calculate the 
+						total revenue generated by your song, the commission received by your manager, and 
+						the commission received by the Internet site.
+						THEN design a Java Program that ask for the title of the song, the purchase price of 
+						the song (in peso and cents), and the number of copies of the song that have been 
+						sold. Calculate the total revenue generated by your song, the commission received by 
+						your manager, and the commission received by the Internet site.
+						Write your design to the following space. Your design should be 1 Class Diagram and 
+						a list of Java Comments without any codes.</p>	
+					<textarea class="code">
+SongSales_GUI
+__________________________________________________________
+
+titlering: String
+priceru : double
+soldung : int
+reveold : double
+managered : double
+interneti : double
+
+__________________________________________________________
+
+compute()
+display()
+2. A Second Box
+SubClass
+__________________________________________________________
+
+//Variables
+
+titlering : String
+priceru : double
+soldung : int
+reveold : double
+managered : double
+interneti : double
+
+__________________________________________________________
+
+//Methods
+
+compute()
+reveold=priceru*soldung
+managered=reveold*0.12
+interneti=reveold*0.03
+
+display()
+title
+revenue
+manager's commission
+site's commission
+					</textarea>
+				</article>
+				<article class='sm-size-article'>
+					<h3>Activity 2.B</h3>
+					<p>Write a Java program based on the design you created in 1.A. Name the Java program</p>
+					<textarea class="code" disabled>
+package SongSales_GUI;
+
+public class SongSales_GUI {
+
+ static SubClass watame = new SubClass();
+ @SuppressWarnings("static-access")
+ public static void main(String[] args) {
+  watame.titlering= watame.j.showInputDialog("Title of the Song: ");
+  watame.spriceru= watame.j.showInputDialog("Price of the Song: ");
+  watame.priceru= Double.parseDouble(watame.spriceru);
+ watame.ssoldung= watame.j.showInputDialog("Sold Copies of the Song: ");
+  watame.sold= Integer.parseInt(watame.ssoldung);
+  
+  watame.compute(); watame.display();
+ }
+}
+
+package SongSales_GUI;
+import javax.swing.*;
+
+public class SubClass {
+ public String titlering, spriceru, ssoldung;
+ public int soldung;
+ public double priceru, reveold, managerblue, site;
+ public JOptionPane j;
+ 
+ public void compute() {
+  reveold= priceru*soldung;
+  managerblue= reveold*0.12;
+  site= reveold*0.03;
+ }
+ 
+ @SuppressWarnings("static-access")
+ public void display() {
+  j.showMessageDialog(null, "Title of the Song: "+ titlering + "\nRevenue: " + reveold +"\nManager's Commission: " + managerblue + "\nSite's Commission: " + site);
+ }
+}
+					</textarea>
+					<p>In this activity, we are able to do problem solving and programming at the same time. We were able to be creative as we design our own output using java and GUI application.</p>
+				</article>
+				<article class='sm-size-article'>
+					<h3>Activity 3</h3>
+					<p>We were told to create a program that will output the sales of song in GUI. Sample of codes are posted below on how we implement the importation, how we create objects and classes and etc. See the codes below</p>
+					<textarea class="code" disabled>
+import java.awt.EventQueue;
+import java.awt.Font;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.SwingConstants;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Color;
+import java.awt.SystemColor;
+import javax.swing.border.LineBorder;
+
+public class GUIDICT {
+
+	private JFrame frame;
+	private JLabel moneychange;
+	private JTextField coinchange;
+	private JTextField insertedcoins;
+	private JLabel coke;
+	private JLabel pepsi;
+	private JLabel soda;
+	private JRadioButton cokeradio;
+	private JRadioButton pepsiradio;
+	private JRadioButton sodaradio;
+	private JTextField stocks_coke;
+	private JTextField stocks_pepsi;
+	private JTextField stocks_soda;
+	private JButton button_change; 
+	public int cokeStock = 25;
+	public int pepsiStock = 25;
+	public int sodaStock = 25;
+
+
+	
+	@SuppressWarnings("unused")
+	public static void main(String[] args) {
+	
+		GUIDICT app = new GUIDICT();
+		
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					GUIDICT window = new GUIDICT();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	
+	public GUIDICT () {
+		initialize();
+	}
+
+	
+	private void initialize() {
+		frame = new JFrame();
+		frame.getContentPane().setForeground(new Color(143, 188, 143));
+		frame.getContentPane().setBackground(new Color(47, 79, 79));
+		frame.setBounds(100, 100, 483, 471);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JLabel title = new JLabel("VENDING MACHINE");
+		title.setForeground(new Color(143, 188, 143));
+		title.setFont(new Font("Franklin Gothic Heavy", Font.BOLD, 40));
+		title.setHorizontalAlignment(SwingConstants.CENTER);
+		title.setBounds(33, 26, 396, 59);
+		frame.getContentPane().add(title);
+		
+		JPanel panel = new JPanel();
+		panel.setForeground(new Color(47, 79, 79));
+		panel.setBorder(new LineBorder(new Color(85, 107, 47), 4, true));
+		panel.setBackground(new Color(128, 128, 128));
+		panel.setBounds(68, 155, 323, 168);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		cokeradio = new JRadioButton("Coke \u20B125");
+		cokeradio.setFont(new Font("Tahoma", Font.BOLD, 11));
+		cokeradio.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(cokeradio.isSelected()) {
+					pepsiradio.setSelected(false);
+					sodaradio.setSelected(false);
+				}
+			}
+		});
+		cokeradio.setBounds(19, 33, 109, 23);
+		panel.add(cokeradio);
+		
+		pepsiradio = new JRadioButton("Pepsi \u20B135");
+		pepsiradio.setFont(new Font("Tahoma", Font.BOLD, 11));
+		pepsiradio.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(pepsiradio.isSelected()) {
+					cokeradio.setSelected(false);
+					sodaradio.setSelected(false);
+				}
+			}
+		});
+		pepsiradio.setBounds(19, 72, 109, 23);
+		panel.add(pepsiradio);
+		
+		sodaradio = new JRadioButton("Soda \u20B145");
+		sodaradio.setFont(new Font("Tahoma", Font.BOLD, 11));
+		sodaradio.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(sodaradio.isSelected()) {
+					cokeradio.setSelected(false);
+					pepsiradio.setSelected(false);
+				}
+			}
+		});
+		sodaradio.setBounds(19, 112, 109, 23);
+		panel.add(sodaradio);
+		
+		coke = new JLabel("No. of Cokes left: ");
+		coke.setFont(new Font("Tahoma", Font.BOLD, 11));
+		coke.setBounds(162, 37, 111, 14);
+		panel.add(coke);
+		
+		pepsi = new JLabel("No. of Pepsi left: ");
+		pepsi.setFont(new Font("Tahoma", Font.BOLD, 11));
+		pepsi.setBounds(162, 76, 111, 14);
+		panel.add(pepsi);
+		
+		soda = new JLabel("No. of Soda left: ");
+		soda.setFont(new Font("Tahoma", Font.BOLD, 11));
+		soda.setBounds(162, 116, 111, 14);
+		panel.add(soda);
+		
+		stocks_coke = new JTextField();
+		stocks_coke.setEditable(false);
+		stocks_coke.setText("25");
+		stocks_coke.setBounds(264, 34, 31, 20);
+		panel.add(stocks_coke);
+		stocks_coke.setColumns(10);
+		
+		stocks_pepsi = new JTextField();
+		stocks_pepsi.setEditable(false);
+		stocks_pepsi.setText("25");
+		stocks_pepsi.setBounds(264, 73, 31, 20);
+		panel.add(stocks_pepsi);
+		stocks_pepsi.setColumns(10);
+		
+		stocks_soda = new JTextField();
+		stocks_soda.setEditable(false);
+		stocks_soda.setText("25");
+		stocks_soda.setBounds(264, 113, 31, 20);
+		panel.add(stocks_soda);
+		stocks_soda.setColumns(10);
+		
+		JButton button_purchase = new JButton("Purchase");
+		button_purchase.setFont(new Font("Tahoma", Font.BOLD, 11));
+		button_purchase.setBackground(new Color(34, 139, 34));
+		button_purchase.setForeground(new Color(240, 248, 255));
+		button_purchase.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double money = 0;
+				
+				money = Double.parseDouble(insertedcoins.getText());
+				
+				if(cokeradio.isSelected()) {
+					money = money - 25;
+				}
+				else if(pepsiradio.isSelected()) {
+					money = money - 35;
+				}
+				else if(sodaradio.isSelected()) {
+					money = money - 45;
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "Choose your desired product.");
+					return;
+				}
+				
+				if(money < 0) {
+					JOptionPane.showMessageDialog(null, "Insufficient money inserted.");
+				}
+				
+				else {
+					if(cokeStock <= 0) {
+						
+					}
+					JOptionPane.showMessageDialog(null, "Your change: ₱" + money);
+					insertedcoins.setText(" ");
+					coinchange.setText("" + money);
+				}
+			}
+		}
+					);
+		button_purchase.setBounds(85, 350, 89, 23);
+		frame.getContentPane().add(button_purchase);
+		BtnCountListener listener = new BtnCountListener();
+	    button_purchase.addActionListener(listener);
+		
+		JButton button_refund = new JButton("Refund");
+		button_refund.setFont(new Font("Tahoma", Font.BOLD, 11));
+		button_refund.setForeground(new Color(240, 248, 255));
+		button_refund.setBackground(new Color(255, 99, 71));
+		button_refund.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double money = 0;
+				
+				money = Double.parseDouble(insertedcoins.getText());
+				
+				cokeradio.setSelected(false);
+				pepsiradio.setSelected(false);
+				sodaradio.setSelected(false);
+				
+				if(money >= 1) {
+					JOptionPane.showMessageDialog(null, "Here is your money: ₱" + money );
+					insertedcoins.setText(" ");
+				}
+				else if (money <= 0) {
+					JOptionPane.showMessageDialog(null, "You didn't insert anything");
+					
+					
+				}
+			}
+		});
+		button_refund.setBounds(184, 350, 89, 23);
+		frame.getContentPane().add(button_refund);
+		
+		JLabel coinsinserted = new JLabel("Coin Inserted:");
+		coinsinserted.setFont(new Font("Sitka Small", Font.PLAIN, 11));
+		coinsinserted.setForeground(new Color(255, 255, 255));
+		coinsinserted.setBounds(33, 114, 79, 14);
+		frame.getContentPane().add(coinsinserted);
+		
+		insertedcoins = new JTextField();
+		insertedcoins.setFont(new Font("Sitka Small", Font.PLAIN, 11));
+		insertedcoins.setBackground(SystemColor.controlHighlight);
+		insertedcoins.setForeground(new Color(0, 0, 0));
+		insertedcoins.setBounds(122, 111, 86, 20);
+		frame.getContentPane().add(insertedcoins);
+		insertedcoins.setColumns(10);
+
+		
+		JButton button_reset = new JButton("Reset");
+		button_reset.setFont(new Font("Tahoma", Font.BOLD, 11));
+		button_reset.setBackground(new Color(70, 130, 180));
+		button_reset.setForeground(new Color(240, 248, 255));
+		button_reset.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				cokeradio.setSelected(false);
+				pepsiradio.setSelected(false);
+				sodaradio.setSelected(false);
+				insertedcoins.setText(" ");
+			}
+		});
+		button_reset.setBounds(283, 350, 89, 23);
+		frame.getContentPane().add(button_reset);
+		
+		moneychange = new JLabel("Your Change:");
+		moneychange.setFont(new Font("Sitka Small", Font.PLAIN, 11));
+		moneychange.setForeground(new Color(255, 255, 255));
+		moneychange.setBounds(254, 114, 79, 14);
+		frame.getContentPane().add(moneychange);
+		
+		coinchange = new JTextField();
+		coinchange.setFont(new Font("Sitka Small", Font.PLAIN, 11));
+		coinchange.setBackground(SystemColor.controlHighlight);
+		coinchange.setEditable(false);
+		coinchange.setBounds(343, 111, 86, 20);
+		frame.getContentPane().add(coinchange);
+		coinchange.setColumns(10);
+		
+		button_change = new JButton("Take Change");
+		button_change.setFont(new Font("Tahoma", Font.BOLD, 11));
+		button_change.setBackground(new Color(188, 143, 143));
+		button_change.setForeground(new Color(240, 248, 255));
+		button_change.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				double change;
+				
+				change = Double.parseDouble(coinchange.getText());
+				
+				if(change < 0) {
+					JOptionPane.showMessageDialog(null, "You don't have any change");
+				}
+				
+				else {
+					JOptionPane.showMessageDialog(null, "This is your change: ₱" + change );
+					coinchange.setText(" ");
+				}
+			}
+		});
+		button_change.setBounds(163, 384, 118, 23);
+		frame.getContentPane().add(button_change);
+	}
+	
+	public enum coin{
+		fives(5), tens(10),  twenties(20), fifties(50), hundreds(100);
+		
+		private int value;
+
+	    coin(int value){
+	        this.value = value;
+	    }
+
+	    public int getValue(){
+	        return this.value;
+	    }
+	}
+	
+	private class BtnCountListener implements ActionListener {
+	   
+	   
+	      public void actionPerformed(ActionEvent evt) {
+	    	  if(cokeradio.isSelected()) {
+	 	 	         if(cokeStock <= 0) {
+	 	 	        	 JOptionPane.showMessageDialog(null, "Zero is the amount of Coke, please come back later");
+	 	 	        	 return;  	 
+	    		  }
+	 	 	       --cokeStock; 
+	 	 	         stocks_coke.setText(cokeStock + ""); 
+	 	 	         
+	    	  }
+	    	  else if (pepsiradio.isSelected()) {
+	    		  if(pepsiStock <= 0) 
+	    		  	 {
+	    			 JOptionPane.showMessageDialog(null, "Zero is the amount of Pepsi, please come back later");
+	    			
+		 	         return;
+		 	         }
+	    		  --pepsiStock;
+	    		  stocks_pepsi.setText(pepsiStock + "");
+	    	  }
+	    	  else if (sodaradio.isSelected()) {
+	    		  if(sodaStock <= 0) {
+		 	         JOptionPane.showMessageDialog(null, "Zero is the amount of Soda, please come back later");
+		 	       
+		 	         return;
+	    		  	}
+	    		  --sodaStock;
+	    		  stocks_soda.setText(sodaStock + "");
+	    	  }
+	         
+	      }
+	}
+}
+
+					</textarea>
 				</article>
 			</div>
 		</section>

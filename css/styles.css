@@ -35,6 +35,18 @@ body {
 	max-width: 3000px;
 }
 
+.green {
+	color: limegreen;
+}
+
+.red {
+	color: lightred;
+}
+
+.blue {
+	color: var(--link);
+}
+
 /***************************************************************************************************
 *
 *	GENERAL
@@ -981,6 +993,7 @@ body {
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		font-size: 70%;
 	}
 
 	#reflections #images .image div h1 {
@@ -1070,6 +1083,17 @@ body {
 
 	#activities .activity .container article {
 		margin: 10px 0;
+		font-family: var(--main);
+	}
+
+	#activities .activity .container article .code {
+		width: 80%;
+		max-width: 900px;
+		min-height: 300px;
+		padding: 50px;
+		background: var(--dark);
+		color: var(--light);
+		margin: 10px 0 0 0;
 	}
 
 	#activities .activity .container img {
@@ -1089,6 +1113,9 @@ body {
 	#activities .activity .container p {
 		width: 70%;
 		text-align: justify;
+		padding: 20px 0;
+		font-size: 70%;
+		font-family: var(--main);
 	}
 
 	#activities .activity .show {
