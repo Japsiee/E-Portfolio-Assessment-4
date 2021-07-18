@@ -1,17 +1,19 @@
 window.onload = () => {
-	const w1100up = () => {
-		const slideDownBtn = document.querySelectorAll('#team .slide-down-btn');
-		Array.from(slideDownBtn).forEach(btn => {
-			btn.addEventListener('click', e => {
-				if (e.target.nodeName === 'I') {
-					const btn = e.target;
-					const downloadBtn = btn.parentElement.parentElement.children[3];
-					downloadBtn.classList.toggle('show');
-				} else {
-					console.warn('warning error');
-				}
-			});
-		});
+	const w800up = () => {
+		const btnToggle = () => {
+			const slideDownBtn = document.querySelectorAll('#team .slide-down-btn');
+			slideDownBtn.forEach(btn => {
+				btn.addEventListener('click', e => {
+					if (e.target.nodeName === 'I') {
+						const btn = e.target;
+						const downloadBtn = btn.parentElement.parentElement.children[3];
+						downloadBtn.classList.toggle('show');
+					} else {
+						console.warn('warning error');
+					}
+				})
+			})
+		}
 		const searchName = () => {
 			const input = document.querySelector('#search-name');
 			const team = document.querySelector('#team');
@@ -25,26 +27,31 @@ window.onload = () => {
 						team.children[i].style.display = 'none';
 					}
 				}
-			});
+			})
 		}
+		btnToggle();
 		searchName();
 	}
 
-	const w1100down = () => {
+	const w800down = () => {
 		console.log('width is less than 1100');
 	}
 
 	if (window.outerWidth >= 800) {
-		w1100up();
-	} else {
-		w1100down();
+		w800up();
+	}
+
+	if (window.outerWidth <= 799) {
+		w800down();
 	}
 
 	window.addEventListener('resize', () => {
 		if (window.outerWidth >= 800) {
-			w1100up();
-		} else {
-			w1100down();
+			w800up();
+		}
+
+		if (window.outerWidth <= 799) {
+			w800down();
 		}
 	})
 
