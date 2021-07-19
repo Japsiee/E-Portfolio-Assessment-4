@@ -3141,7 +3141,7 @@ body {
 	#intro .sm-size-article {
 		font-weight: 500;
 		z-index: 2;
-		padding: 0 20%;
+		padding: 0 10%;
 		font-size: 1.4rem;
 		text-align: center;
 	}
@@ -3155,7 +3155,7 @@ body {
 
 	#intro .sm-size-article ul {		
 		list-style: none;
-		padding: 0 10%;
+		padding: 0;
 		width: 100%;
 		margin: 5% 0;
 	}
