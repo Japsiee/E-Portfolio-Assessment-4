@@ -3142,13 +3142,13 @@ body {
 
 	#intro .sm-size-article {
 		z-index: 2;
-		padding: 5%;
+		padding: 0 10%;
 		font-size: 1.5rem;
 		text-align: justify;
 	}
 
 	#intro .sm-size-article .subtitle {
-		display: inline-block;
+		display: block;
 		color: var(--light);
 		padding: 5%;
 		margin: 5% 0;
@@ -3156,7 +3156,7 @@ body {
 
 	#intro .sm-size-article ul {
 		list-style: none;
-		padding: 0;
+		padding: 0 20%;
 	}
 
 	#intro .sm-size-article ul li {
@@ -3298,8 +3298,8 @@ body {
 
 	#reflections #images {
 		display: grid;
-		padding: 5px;
-		grid-gap: 5px;
+		padding: 20px;
+		grid-gap: 20px;
 		grid-template-columns: 1fr;
 		grid-template-rows: auto;
 		width: 100%;
@@ -3340,7 +3340,7 @@ body {
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		font-size: 70%;
+		font-size: 100%;
 	}
 
 	#reflections #images .image div h1 {
@@ -3488,41 +3488,6 @@ body {
 		transition-delay: .5s;
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	/***************************************************************************************************
 	*
 	*	TEAM PAGE SECTION
@@ -3530,7 +3495,7 @@ body {
 	***************************************************************************************************/
 
 	.mobile-nav .back {
-		font-size: 1rem;
+		font-size: .5rem;
 		text-decoration: none;
 		color: var(--dark);
 	}
@@ -3643,13 +3608,13 @@ body {
 	#search-name {
 		width: 70%;
 		max-width: 400px;
-		padding: 2%;
-		font-size: 1rem;
+		padding: 5%;
+		font-size: 1.2rem;
 		margin-left: 5%;
 		color: var(--black);
 		border: none;
 		background: var(--light);
-		border-radius: 10px;
+		border-radius: 5px;
 	}
 
 	/***************************************************************************************************
