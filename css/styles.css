@@ -2589,7 +2589,6 @@ body {
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		font-size: 2rem;
 		width: 100%;
 		height: auto;
 		background: var(--light);
@@ -2599,7 +2598,7 @@ body {
 
 	.mobile-nav .mobile-nav-btn {
 		background: none;
-		font-size: 5rem;
+		font-size: 3rem;
 		padding: 5% 0;
 		border: none;
 	}
@@ -2642,7 +2641,7 @@ body {
 	}
 
 	.mobile-nav .mobile-nav-list li a {
-		font-size: 3rem;
+		font-size: 2.5rem;
 		padding: 2rem;
 		width: 100%;
 		color: var(--dark);
@@ -3065,9 +3064,9 @@ body {
 		width: 15em;
 		height: 15em;
 		position: absolute;
-		top: 5%;
+		top: 2%;
 		right: -10%;
-		opacity: .5;
+		opacity: .1;
 		animation: uranus 2s linear infinite;
 	}
 
@@ -3082,18 +3081,18 @@ body {
 
 	@keyframes uranus {
 		0% {
-			top: 5%;
-			opacity: .4;
+			top: 2%;
+			opacity: .2;
 		}
 
 		50% {
-			top: 6%;
-			opacity: 1;
+			top: 3%;
+			opacity: .6;
 		}
 
 		100% {
-			top: 5%;
-			opacity: .3;
+			top: 2%;
+			opacity: .4;
 		}
 	}
 
@@ -3105,27 +3104,26 @@ body {
 
 	#intro hr {
 		z-index: 2;
-		width: 50%;
-		margin: 40px;
+		width: 60%;
+		margin: 2%;
 		color: var(--dark);
 	}
 
 	#intro > .title {
-		font-size: 4rem;
+		font-size: 3rem;
 	}
 
 	#intro > .subtitle {
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 
-	#intro > .title, #intro > .subtitle {
+	#intro .title, #intro .subtitle {
 		z-index: 2;
 		text-align: center;
-		padding: 5%;
 	}
 
 	#intro .intro-title, #intro .intro-subtitle {
-		padding: 5%;
+		padding: 4%;
 		visibility: hidden;
 		opacity: 0;
 		margin-top: -140px;
@@ -3141,10 +3139,11 @@ body {
 	}
 
 	#intro .sm-size-article {
+		font-weight: 500;
 		z-index: 2;
-		padding: 0 10%;
-		font-size: 1.5rem;
-		text-align: justify;
+		padding: 0 20%;
+		font-size: 1.4rem;
+		text-align: center;
 	}
 
 	#intro .sm-size-article .subtitle {
@@ -3154,24 +3153,27 @@ body {
 		margin: 5% 0;
 	}
 
-	#intro .sm-size-article ul {
+	#intro .sm-size-article ul {		
 		list-style: none;
-		padding: 0 20%;
+		padding: 0 10%;
+		width: 100%;
+		margin: 5% 0;
 	}
 
 	#intro .sm-size-article ul li {
 		cursor: pointer;
 		margin: 0;
 		text-align: left;
-		margin: 5% 0;
 		display: flex;
+		width: 100%;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 0 5%;
+		text-align: center;
 	}
 
 	#intro .sm-size-article ul li i {
-		padding: 30px;
+		padding: 20px 0;
 		font-size: 2rem;
 	}
 
@@ -3183,7 +3185,6 @@ body {
 		text-decoration: none;
 		color: inherit;
 		font-weight: 300;
-		font-size: 1rem;
 	}
 
 	#intro .sm-size-article ul li .fa-arrow-right {
@@ -3191,6 +3192,7 @@ body {
 		opacity: 0;
 		color: var(--link);
 		transition-duration: .5s;
+		font-size: 100%;
 	}
 
 	#intro .sm-size-article ul li:hover .fa-arrow-right {
