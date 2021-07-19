@@ -3529,7 +3529,7 @@ body {
 
 	#team .sm-size-article {
 		position: relative;
-		padding: 5%;
+		padding: 10%;
 		font-family: var(--main);
 		height: auto;
 		cursor: pointer;
@@ -3538,7 +3538,7 @@ body {
 		transition-duration: .5s;
 		color: var(--dark);
 		background: var(--light);
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 
 	#team .slide-down-btn {
