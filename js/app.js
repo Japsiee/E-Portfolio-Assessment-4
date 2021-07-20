@@ -109,7 +109,7 @@ window.onload = () => {
 					reflectionsSubTitle.classList.remove('slide');
 				}
 
-				if (scrollY >= 3900) {
+				if (scrollY >= 3400) {
 					activitiesTitle.classList.add('rotate');
 					collections.classList.add('slide');
 					activitiesContainer.classList.add('show');
@@ -205,8 +205,8 @@ window.onload = () => {
 			const activitiesContainer = document.querySelector('#activities .container');
 			window.addEventListener('scroll', () => {
 				const scrollY = window.scrollY;
-				// console.log(scrollY);
-				if (scrollY >= 300) {
+				console.log(scrollY);
+				if (scrollY >= 200) {
 					introTitle.classList.add('slide-down');
 					introSubTitle.classList.add('slide-down');
 				} else {
@@ -214,7 +214,7 @@ window.onload = () => {
 					introSubTitle.classList.remove('slide-down');
 				}
 
-				if (scrollY >= 3300) {
+				if (scrollY >= 3000) {
 					reflectionsTitle.classList.add('slide');
 					reflectionsSubTitle.classList.add('slide');
 					reflectionsSubTitle.style.transitionDuration = '1.5s';
@@ -223,7 +223,7 @@ window.onload = () => {
 					reflectionsSubTitle.classList.remove('slide');
 				}
 
-				if (scrollY >= 6900) {
+				if (scrollY >= 5800) {
 					activitiesTitle.classList.add('rotate');
 					collections.classList.add('slide');
 					activitiesContainer.classList.add('show');
@@ -232,10 +232,6 @@ window.onload = () => {
 					collections.classList.remove('slide');
 					activitiesContainer.classList.remove('show');
 				}
-
-
-
-
 			})
 		}
 		mobileNavFunction();

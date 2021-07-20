@@ -14,18 +14,6 @@ window.onload = () => {
 				})
 			})
 		}
-		const slideDownBtn = document.querySelectorAll('#team .slide-down-btn');
-		Array.from(slideDownBtn).forEach(btn => {
-			btn.addEventListener('click', e => {
-				if (e.target.nodeName === 'I') {
-					const btn = e.target;
-					const downloadBtn = btn.parentElement.parentElement.children[3];
-					downloadBtn.classList.toggle('show');
-				} else {
-					console.warn('warning error');
-				}
-			});
-		});
 		const searchName = () => {
 			const input = document.querySelector('#search-name');
 			const team = document.querySelector('#team');
