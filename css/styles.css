@@ -25,7 +25,7 @@ html {
 }
 
 body {
-	font-size: 2.2em;
+	font-size: 1.5em;
 	position: relative;
 	height: auto;
 	display: flex;
@@ -33,6 +33,7 @@ body {
 	flex-direction: column;
 	width: 100%;
 	max-width: 3000px;
+	margin-top: 4em;
 }
 
 .green {
@@ -53,20 +54,16 @@ body {
 *
 ***************************************************************************************************/
 
-.sm-size-article, .md-size-article, .lg-size-article {
-	padding: 20px 100px;
-}
-
 .sm-size-article {
-	font-size: 1em;
+	font-size: 100%;
 }
 
 .md-size-article {
-	font-size: 2em;
+	font-size: 150%;
 }
 
 .lg-size-article {
-	font-size: 3em;
+	font-size: 250%;
 }
 
 .highlight {
@@ -82,18 +79,18 @@ body {
 .title {
 	display: block;
 	text-align: left;
-	font-size: 3em;
+	font-size: 250%;
 	font-family: var(--main);
 }
 
 .subtitle {
 	display: block;
 	text-align: left;
-	font-size: 1.5em;
+	font-size: 200%;
 	font-family: var(--main);
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 800px) {
 
 	.sorry, .mobile-nav {
 		display: none;
@@ -121,16 +118,15 @@ body {
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
-		padding: 35px;
 		top: 0;
 		left: 0;
 		z-index: 10;
 		width: 100%;
-		max-height: 900px;
 		background: var(--dark);
 		color: var(--light);
 		transition-duration: .5s;
 		overflow: hidden;
+		height: 4em;
 	}
 
 	.active {
@@ -142,7 +138,7 @@ body {
 	.main-nav-btn {
 		user-select: none;
 		cursor: pointer;
-		font-size: 1.5em;
+		font-size: 100%;
 		transition-duration: .2s;
 		display: flex;
 		justify-content: center;
@@ -153,7 +149,7 @@ body {
 	.main-nav-btn .fa-location-arrow {
 		visibility: hidden;
 		opacity: 0;
-		font-size: 20%;
+		font-size: 50%;
 		transition-duration: .2s;
 	}
 
@@ -167,7 +163,7 @@ body {
 	}
 
 	.clicked {
-		font-size: 1em;
+		font-size: 50%;
 		transition-duration: .2s;
 		font-weight: 900;
 		color: var(--link);
@@ -177,14 +173,14 @@ body {
 		visibility: hidden;
 		opacity: 0;
 		transition-duration: .2s;
-		margin-right: -20%;
+		margin-right: 0;
 	}
 
 	.show {
 		visibility: visible;
 		opacity: 1;
 		transition-duration: .2s;
-		margin-right: 0;
+		margin-right: 10%;
 	}
 
 	.main-nav-list ul {
@@ -196,21 +192,21 @@ body {
 
 	.main-nav-list ul li {
 		user-select: none;
-		margin: 0 5px;
+		margin: 0 10%;
 		font-weight: 600;
-		font-size: 3rem;
+		font-size: 100%;
 	}
 
 	.main-nav-list li #main-content-btn {
-		padding: 10px;
+		padding: 5%;
 		margin: 0 20px;
-		width: 100px;
+		width: auto;
 		border: 2px solid var(--dark);
 		background: var(--dark);
 		color: var(--light);
 		cursor: pointer;
 		border-radius: 5px;
-		font-size: 1em;
+		font-size: 80%;
 	}
 
 	.main-nav-list li #main-content-btn:hover {
@@ -218,8 +214,8 @@ body {
 	}
 
 	.main-nav-list ul li .fa-vector-square {
-		font-size: 80%;
-		padding: 20px;
+		font-size: 40%;
+		padding: 0 20%;
 		visibility: hidden;
 		opacity: 0;
 		transition-duration: .2s;
@@ -393,12 +389,11 @@ body {
 
 	#banner {
 		width: 100%;
-		height: 100vh;
-		max-height: 900px;
+		min-height: 100vh;
+		height: auto;
 		background: var(--dark);
 		position: relative;
 		color: var(--light);
-		padding-top: 150px;
 		overflow: hidden;
 	}
 
@@ -409,7 +404,7 @@ body {
 		width: 100%;
 		height: 100%;
 		position: absolute;
-		bottom: -60%;
+		bottom: -20%;
 		left: 35%;
 		opacity: .8;
 		transform: rotateZ(0deg);
@@ -422,7 +417,7 @@ body {
 		height: 20em	;
 		position: absolute;
 		top: 20%;
-		left: -15%;
+		left: -10%;
 		opacity: .2;
 		animation: moon 20s linear infinite;
 		transform: rotateZ(0deg);
@@ -634,67 +629,57 @@ body {
 	#banner > .sm-size-article {
 		position: relative;
 		z-index: 2;
+		text-align: justify;
+		padding: 5%;
+		width: 50%;
+		font-size: 150%;
+	}
+
+	#banner > .lg-size-article {
+		position: relative;
+		z-index: 2;
+		font-family: var(--sub);
+		padding: 5%;
 		width: 60%;
-		height: 40%;
-		text-align: justify;
-	}
-
-	#banner > .lg-size-article {
-		position: relative;
-		z-index: 2;
-		font-family: var(--sub);
+		font-size: 300%;
 		letter-spacing: 5px;
-		font-size: 2.7em;
 	}
 
 	#banner > #right-object {
+		background: red;
 		opacity: 1;
 		position: absolute;
 		z-index: 2;
-		top: 150px;
+		top: 2em;
 		right: 5%;
 		background: transparent;
 		width: 40%;
-		height: 30%;
+		height: auto;
 		color: var(--light);
-		padding: 20px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-direction: column;
+		padding: 1em;
 	}
 
-	#banner > #right-object #time {
+	#banner > #right-object #date, #banner > #right-object #time {
 		font-family: var(--main);
-		font-size: 3em;
-		border: 2px solid var(--light);
-		padding: 30px;
-		border-radius: 10px;
-		color: var(--link);
-	}
-
-	#banner > #right-object #date, #banner > #right-object #local {
-		background: var(--dark);
-		color: var(--light);
-		padding: 10px;
-		border-radius: 10px;
 	}
 
 	#banner > #right-object #date {
-		font-family: var(--main);
-		position: absolute;
-		top: 2%;
-		left: 8%;
+		
 	}
 
-	#banner > #right-object #local {
-		position: absolute;
-		font-family: var(--main);
-		bottom: 2%;
-		right: 8%;
+	#banner > #right-object #time {
+		color: var(--link);
+		padding: 5%;
+		font-size: 300%;
+		letter-spacing: 5px;
 	}
 
 	#banner > #right-object .cover {
-		width: 40%;
+		width: 0%;
 		height: 100%;
 		position: absolute;
 		background: var(--black);
@@ -713,7 +698,7 @@ body {
 	#banner > #right-object:hover .cover {
 		width: 100%;
 		height: 100%;
-		opacity: 1;
+		opacity: .9;
 		transition-duration: .5s;
 	}
 
@@ -726,8 +711,8 @@ body {
 	#sourcecode {
 		font-size: .8em;
 		position: absolute;
-		padding: 10px;
-		bottom: 10%;
+		padding: 5%;
+		bottom: 5%;
 		right: 5%;
 		color: var(--link);
 		text-decoration: none;
@@ -756,12 +741,11 @@ body {
 	***************************************************************************************************/
 
 	#intro {
+		position: relative;
 		width: 100%;
 		height: auto;
 		background: var(--light);
-		position: relative;
 		color: var(--dark);
-		padding-top: 130px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -809,26 +793,14 @@ body {
 
 	/* SVGs END */
 
-	#intro .title {
-		color: var(--link);
-	}
-
-	#intro hr {
-		z-index: 2;
-		width: 50%;
-		margin: 40px;
-		color: var(--dark);
-	}
-
-	#intro > .title, #intro > .subtitle {
-		z-index: 2;
-		text-align: center;
+	#intro .intro-title {
+		padding: 1em 0 0 0;
 	}
 
 	#intro .intro-title, #intro .intro-subtitle {
 		visibility: hidden;
 		opacity: 0;
-		margin-top: -180px;
+		margin-top: -5em;
 		text-align: center;
 		transition-duration: .5s;
 	}
@@ -837,19 +809,35 @@ body {
 		visibility: visible;
 		opacity: 1;
 		margin-top: 0;
-		transition-duration: 1.5s;
+		transition-duration: 1s;
+	}
+
+	#intro .title {
+		color: var(--link);
+	}
+
+	#intro hr {
+		z-index: 2;
+		width: 50%;
+		margin: 1em;
+		color: var(--dark);
+	}
+
+	#intro > .title, #intro > .subtitle {
+		z-index: 2;
+		text-align: center;
+	}
+
+	#intro .sm-size-article {
+		padding: 1em 3em;
+		z-index: 2;
 	}
 
 	#intro .sm-size-article .subtitle {
 		display: inline-block;
 		color: var(--light);
-		padding: 20px;
-		margin: 10px 0;
-	}
-
-	#intro .sm-size-article {
-		max-width: 1500px;
-		z-index: 2;
+		padding: .3em;
+		margin: .5em 0;
 	}
 
 	#intro .sm-size-article ul {
@@ -888,19 +876,22 @@ body {
 
 	#intro .grid {
 		width: 100%;
-		max-width: 1500px;
-		height: 500px;
+		max-width: 3000px;
+		height: auto;
 		display: grid;
+		grid-gap: 1em;
 		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(2, 1fr);
+		grid-template-rows: auto;
 		position: relative;
+		padding: 8em;
 	}
 
 	#intro .grid > .box {
 		position: relative;
 		width: 100%;
-		height: 100%;
+		height: 10em;
 		cursor: pointer;
+		padding: 2em;
 	}
 
 	#intro .grid > .box img {
@@ -949,19 +940,22 @@ body {
 		background: var(--dark);
 		color: var(--light);
 		position: relative;
-		padding-top: 130px;
+	}
+
+	#reflections .title {
+		padding: 1em 0 0 0;
 	}
 
 	#reflections .title, #reflections .subtitle {
 		visibility: hidden;
 		opacity: 0;
-		margin-left: 500px;
+		margin-left: 5em;
 		transition-duration: .5s;
 	}
 
 	#reflections .photographer {
 		text-align: center;
-		padding: 50px;
+		padding: 1em;
 	}
 
 	#reflections .photographer a {
@@ -976,27 +970,26 @@ body {
 	#reflections .slide {
 		visibility: visible;
 		opacity: 1;
-		margin-left: 50px;
+		margin-left: 1em;
 		transition-duration: .5s;
 	}
 
 	#reflections #images {
 		display: grid;
-		padding: 50px;
-		grid-gap: 20px;
+		grid-gap: 1em;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: auto;
 		width: 100%;
-		max-width: 1500px;
 		height: auto;
 		position: relative;
-		margin: 50px auto;
+		padding: 1em;
 	}
 
 	#reflections #images .image {
 		position: relative;
 		transition-duration: .5s;
-		height: 300px;
+		width: 100%;
+		height: 15em;
 	}
 
 	#reflections #images .image img {
@@ -1011,20 +1004,20 @@ body {
 		position: absolute;
 		bottom: 0;
 		left: 0;
-		width: 100%;
-		height: 2%;
-		visibility: hidden;
 		opacity: 0;
+		height: 50%;
+		width: 100%;
+		visibility: hidden;
 		cursor: pointer;
 		background: var(--black);
 		color: var(--light);
 		font-family: var(--sub);
-		padding: 20px;
+		padding: 1em;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		font-size: 70%;
+		font-size: 100%;
 	}
 
 	#reflections #images .image div h1 {
@@ -1179,29 +1172,26 @@ body {
 
 	.headspace {
 		width: 100%;
-		background: var(--dark);
-		padding-top: 130px;
-		color: var(--light);
+		background: var(--light);
+		color: var(--link);
 	}
 
 	.headspace .title {
 		text-align: center;
-		padding: 50px;
 	}
 
 	#team {
-		padding: 20px;
 		width: 100%;
 		height: auto;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: auto;
-		grid-gap: 40px;
+		background: var(--light);
+		padding: 1em;
 	}
 
 	#team .sm-size-article {
 		position: relative;
-		padding: 20px;
 		font-family: var(--main);
 		height: auto;
 		cursor: pointer;
@@ -1209,6 +1199,7 @@ body {
 		color: var(--dark);
 		line-height: 150%;
 		transition-duration: .5s;
+		padding: 1em;
 	}
 
 	#team .slide-down-btn {
@@ -1247,10 +1238,9 @@ body {
 
 	#team .sm-size-article .cv {
 		position: absolute;
-		color: var(--light);
+		color: var(--black);
 		background: var(--link);
-		padding: 10px;
-		font-size: 100%;
+		padding: .5em;
 		text-decoration: none;
 		border-radius: 5px;
 		width: 20%;
@@ -1258,1255 +1248,17 @@ body {
 		justify-content: center;
 		align-items: center;
 
-		top: 0;
-		right: 5%;
+		top: 0%;
+		right: 0;
 		visibility: hidden;
 		opacity: 0;
 		transition-duration: .5s;
 	}
 
 	#team .sm-size-article .show {
-		top: 50%;
-		visibility: visible;
-		opacity: 1;
-		transition-duration: .5s;
-	}
-
-	#team .sm-size-article .cv:hover {
-		background: var(--dark);
-		transition-duration: .5s;
-	}
-
-	#search-name {
-		width: 40%;
-		padding: 20px;
-		font-size: 1em;
-		margin: 25px;
-		color: var(--dark);
-		border: 2px solid var(--light);
-		background: lightgrey;
-		border-radius: 10px;
-	}
-
-	/***************************************************************************************************
-	*
-	*	FOOTER SECTION
-	*
-	***************************************************************************************************/
-	
-	footer {
-		width: 100%;
-		height: auto;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: auto;
-		background: var(--dark);
-		color: var(--light);
-		font-weight: 500;
-	}
-
-	footer .box {
-		font-size: 1em;
-		text-align: center;
-		width: 100%;
-		height: auto;
-		padding: 50px;
-	}
-
-	footer .box ul {
-		list-style: none;
-		padding: 20px 0;
-	}
-
-	footer .box ul li a, footer .box a {
-		font-weight: 200;
-		font-size: 80%;
-		text-decoration: none;
-		color: var(--link);
-		transition-duration: .5s;
-	}
-
-	footer .box ul li a:hover, footer .box a:hover {
-		color: var(--light);
-		transition-duration: .5s;
-	}
-
-}
-
-@media screen and (max-width: 1099px) and (min-width: 800px) {
-
-	.sorry, .mobile-nav {
-		display: none;
-	}
-	
-	::-webkit-scrollbar {
-		width: 10px;
-	}
-
-	::-webkit-scrollbar-track {
-		box-shadow: inset 0 0 10px var(--dark);
-	}
-
-	::-webkit-scrollbar-thumb {
-		border-radius: 5px;
-		background: var(--light);
-	}
-
-	::-webkit-scrollbar-thumb:hover {
-		background: var(--link);
-	}
-
-	body {
-		font-size: 1.5em;
-	}
-
-	.main-nav {
-		position: fixed;
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
-		padding: 10px;
-		top: 0;
-		left: 0;
-		z-index: 10;
-		width: 100%;
-		max-height: 900px;
-		background: var(--dark);
-		color: var(--light);
-		transition-duration: .5s;
-		overflow: hidden;
-	}
-
-	.active {
-		background: var(--light);
-		color: var(--dark);
-		transition-duration: .5s;
-	}
-
-	.main-nav-btn {
-		user-select: none;
-		cursor: pointer;
-		transition-duration: .2s;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: row;
-	}
-
-	.main-nav-btn .fa-location-arrow {
-		visibility: hidden;
-		opacity: 0;
-		font-size: 20%;
-		transition-duration: .2s;
-	}
-
-	.main-nav-btn:hover .fa-location-arrow {
-		visibility: visible;
-		opacity: 1;
-	}
-
-	.main-nav-btn:hover {
-		opacity: .8;
-	}
-
-	.clicked {
-		transition-duration: .2s;
-		font-weight: 900;
-		color: var(--link);
-	}
-
-	.main-nav-list {
-		visibility: hidden;
-		opacity: 0;
-		transition-duration: .2s;
-		margin-right: -20%;
-	}
-
-	.show {
-		visibility: visible;
-		opacity: 1;
-		transition-duration: .2s;
-		margin-right: 0;
-	}
-
-	.main-nav-list ul {
-		list-style: none;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.main-nav-list ul li {
-		user-select: none;
-		margin: 0 5px;
-		font-weight: 600;
-	}
-
-	.main-nav-list li #main-content-btn {
-		padding: 10px;
-		margin: 0 20px;
-		width: 100px;
-		border: 2px solid var(--dark);
-		background: var(--dark);
-		color: var(--light);
-		cursor: pointer;
-		border-radius: 5px;
-		font-size: 1em;
-	}
-
-	.main-nav-list li #main-content-btn:hover {
-		opacity: .7;
-	}
-
-	.main-nav-list ul li .fa-vector-square {
-		font-size: 80%;
-		padding: 20px;
-		visibility: hidden;
-		opacity: 0;
-		transition-duration: .2s;
-	}
-
-	.main-nav-list ul li:hover .fa-vector-square {
-		visibility: visible;
-		opacity: 1;
-		animation: spin 3s linear infinite;
-	}
-
-	@keyframes spin {
-		0% {
-			transform: rotateZ(0deg);
-		}
-
-		100% {
-			transform: rotateZ(360deg);
-		}
-	}
-
-	.main-nav-list ul li:hover {
-		color: var(--link);
-	}
-
-	.main-nav-list ul li a {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: row;
-		text-decoration: none;
-		color: inherit;
-	}
-
-	/***************************************************************************************************
-	*
-	*	MAIN SECTION
-	*
-	***************************************************************************************************/
-
-	.content {
-		visibility: hidden;
-		opacity: 0;
-		transition-duration: .5s;
-
-		position: fixed;
-		width: 100%;
-		height: 100vh;
-		top: 0;
-		left: 0;
-		z-index: 20;
-		background: rgba(255, 255, 255, .9);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-	}
-
-	.content .writer {
-		font-size: 80%;
-		color: var(--light);
-		padding: 20px 0;
-	}
-
-	.content .writer a {
-		color: var(--link);
-		text-decoration: none;
-	}
-
-	.content .writer a:hover {
-		text-decoration: underline;
-	}
-
-	.open {
-		visibility: visible;
-		opacity: 1;
-		transition-duration: .5s;
-	}
-
-	.content .box {
-		padding: 50px;
-		width: 70%;
-		height: 90%;
-		background: var(--dark);
-		color: var(--black);
-		backdrop-filter: blur(50px);
-		overflow-y: auto;
-		font-family: var(--sub);
-	}
-
-	.content .box #close-content-btn {
-		position: absolute;
-		top: 2%;
-		right: 3%;
-		font-size: 2em;
-		border: none;
-		color: var(--link);
-		background: none;
-		cursor: pointer;
-	}
-
-	.content .box #close-content-btn:hover {
-		color: var(--light);
-		transition-duration: .2s;
-	}
-
-	.content .box .title {
-		color: var(--link);
-		padding: 0 0 10px 0;
-	}
-
-	.content .box .questions {
-		margin: 20px 0;
-	}
-
-	.content .box .questions .question-btn {
-		color: var(--link);
-		border: 2px solid var(--link);
-		padding: 10px;
-		font-weight: 500;
-		cursor: pointer;
-		z-index: 5;
-		transition-duration: .5s;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-
-	.content .box .questions .question-btn i {
-		z-index: -1;
-	}
-
-	.content .box .questions .btn-toggle {
-		border: 2px solid var(--link);
-		background: var(--link);
-		color: var(--light);
-		transition-duration: .5s;
-	}
-
-	.content .box .answer {
-		display: none;
-
-		font-size: 1em;
-		padding: 10px 0;
-		text-align: justify;
-		font-size: 80%;
-		z-index: 1;
-		color: var(--light);
-	}
-
-	.content .box .show {
-		display: block;
-	}
-
-	.content .box .answer > img {
-		width: 100%;
-		height: auto;
-		max-height: 400px;
-		padding: 40px;
-	}
-
-	.content .box .answer a {
-		color: var(--link);
-	}
-
-	/***************************************************************************************************
-	*
-	*	BANNER SECTION
-	*
-	***************************************************************************************************/
-
-	#banner {
-		width: 100%;
-		height: 100vh;
-		max-height: 900px;
-		background: var(--dark);
-		position: relative;
-		color: var(--light);
-		padding-top: 40px;
-		font-size: 1.5em;
-		overflow: hidden;
-	}
-
-	/* SVGs START */
-
-	#banner #earth {
-		z-index: 1;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		bottom: -60%;
-		left: 35%;
-		opacity: .8;
-		transform: rotateZ(0deg);
-		animation: earth 20s linear infinite;
-	}
-
-	#banner #moon {
-		z-index: 1;
-		width: 20em;
-		height: 20em	;
-		position: absolute;
-		top: 20%;
-		left: -15%;
-		opacity: .2;
-		animation: moon 20s linear infinite;
-		transform: rotateZ(0deg);
-	}
-
-	#banner #sattelite {
-		z-index: 1;
-		width: 5em;
-		height: 5em	;
-		position: absolute;
-		top: 35%;
-		left: 15%;
-		opacity: .9;
-		transform: rotateZ(-130deg);
-		animation: sattelite 3s linear infinite;
-		animation-direction: reverse;
-	}
-
-	#banner #comet1 {
-		z-index: 1;
-		width: 5em;
-		height: 5em	;
-		position: absolute;
-		top: 20%;
-		right: 15%;
-		opacity: .8;
-		transform: rotateZ(340deg);
-		animation: comet1 1.5s linear infinite;
-		animation-fill-mode: forwards;
-		animation-delay: 2s;
-	}
-
-	#banner #comet2 {
-		z-index: 2;
-		width: 1em;
-		height: 1em	;
 		position: absolute;
 		top: 10%;
-		right: 30%;
-		opacity: .8;
-		transform: rotateZ(340deg);
-		animation: comet2 2s linear infinite;
-		animation-fill-mode: forwards;
-	}
-
-	@keyframes comet1 {
-		0% {
-			top: 20%;
-			right: 15%;
-			opacity: .8;
-		}
-
-		25% {
-			opacity: .6;
-		}
-
-		45% {
-			opacity: 1;
-		}
-
-		50% {
-			opacity: .4;
-		}
-
-		65% {
-			opacity: .8;
-		}
-
-		75% {
-			opacity: .2;
-		}
-
-		100% {
-			top: 80%;
-			right: 90%;
-			opacity: 0;
-		}
-	}
-
-	@keyframes comet2 {
-		0% {
-			top: 10%;
-			right: 30%;
-			opacity: .8;
-		}
-
-		25% {
-			opacity: .6;
-		}
-
-		45% {
-			opacity: 1;
-		}
-
-		50% {
-			opacity: .4;
-		}
-
-		65% {
-			opacity: .8;
-		}
-
-		75% {
-			opacity: .2;
-		}
-
-		100% {
-			top: 90%;
-			right: 100%;
-			opacity: 0;
-		}
-	}
-
-	@keyframes moon {
-		0% {
-			transform: rotateZ(0deg);
-			top: 20%;
-			opacity: .2;
-		}
-
-		5% {
-			opacity: .8;
-		}
-
-		10% {
-			opacity: .2;
-		}
-
-		30% {
-			opacity: .7;
-		}
-
-		35% {
-			opacity: .2;
-		}
-
-		50% {
-			transform: rotateZ(180deg);
-			top: 21%;
-		}
-
-		75% {
-			opacity: .9;
-		}
-
-		80% {
-			opacity: .2;
-		}
-
-		100% {
-			transform: rotateZ(360deg);
-			top: 20%;
-			opacity: .2;
-		}
-	}
-
-	@keyframes sattelite {
-		0% {
-			top: 46%;
-			left: 15%;
-			transform: rotateZ(-130deg);
-		}
-
-		50% {
-			top: 48%;
-			left: 15%;
-			transform: rotateZ(-140deg);
-		}
-
-		100% {
-			top: 46%;
-			left: 15%;
-			transform: rotateZ(-130deg);
-		}
-	}
-
-	@keyframes earth {
-		0% {
-			transform: rotateZ(0deg);
-		}
-
-		10% {
-			opacity: .2;
-		}
-
-		15% {
-			opacity: .7;
-		}
-
-		50% {
-			transform: rotateZ(180deg);
-		}
-
-		65% {
-			opacity: .4;
-		}
-
-		70% {
-			opacity: .6;
-		}
-
-		100% {
-			transform: rotateZ(360deg);
-		}
-	}
-
-	/* SVGs END */
-
-	#banner > .sm-size-article {
-		position: relative;
-		z-index: 2;
-		width: 100%;
-		padding: 50px;
-		height: auto;
-		text-align: justify;
-	}
-
-	#banner > .lg-size-article {
-		position: relative;
-		z-index: 2;
-		padding: 0 50px;
-		font-size: 2.2em;
-		font-family: var(--sub);
-		letter-spacing: 5px;
-	}
-
-	#banner > #right-object {
-		z-index: 5;
-		opacity: 1;
-		position: absolute;
-		z-index: 2;
-		top: 70%;
-		right: 5%;
-		background: transparent;
-		width: auto;
-		height: 20%;
-		color: var(--light);
-		padding: 50px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	#banner > #right-object #time {
-		font-family: var(--main);
-		border: 2px solid var(--light);
-		padding: 10px;
-		border-radius: 10px;
-		color: var(--link);
-	}
-
-	#banner > #right-object #date, #banner > #right-object #local {
-		background: transparent;
-		color: var(--light);
-		padding: 10px;
-		width: auto;
-		border-radius: 10px;
-	}
-
-	#banner > #right-object #date {
-		font-family: var(--main);
-	}
-
-	#banner > #right-object #local {
-		font-family: var(--main);
-	}
-
-	#banner > #right-object .cover {
-		z-index: 5;
-		width: 50%;
-		height: 100%;
-		position: absolute;
-		background: var(--black);
-		opacity: .7;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		top: 0;
-		left: 0;
-		opacity: 0;
-		cursor: pointer;
-		transition-duration: .2s;
-		padding: 30px;
-	}
-
-	#banner > #right-object:hover .cover {
-		width: 100%;
-		height: 100%;
-		opacity: 1;
-		transition-duration: .5s;
-	}
-
-	#banner > #right-object .cover .caption {
-		color: var(--light);
-		font-family: var(--sub);
-		font-weight: 100;
-	}
-
-	#sourcecode {
-		font-size: .8em;
-		position: absolute;
-		padding: 10px;
-		bottom: 10%;
-		right: 5%;
-		color: var(--link);
-		text-decoration: none;
-	}
-
-	#sourcecode .fa-code {
-		visibility: hidden;
-		opacity: 0;
-	}
-
-	#sourcecode:hover {
-		transition-duration: .5s;
-		color: var(--light);
-	}
-
-	#sourcecode:hover .fa-code {
-		visibility: visible;
-		opacity: 1;
-		transition-duration: .2s;
-	}
-
-	/***************************************************************************************************
-	*
-	*	INTRO SECTION
-	*
-	***************************************************************************************************/
-
-	#intro {
-		width: 100%;
-		height: auto;
-		background: var(--light);
-		position: relative;
-		color: var(--dark);
-		padding-top: 130px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		overflow: hidden;
-	}
-
-	/* SVGs START */
-
-	#intro #uranus {
-		width: 20em;
-		height: 20em;
-		position: absolute;
-		top: 5%;
-		right: -10%;
-		opacity: .7;
-		animation: uranus 2s linear infinite;
-	}
-
-	#intro #mercury {
-		width: 25em;
-		height: 25em;
-		position: absolute;
-		top: 80%;
-		left: -10%;
-		opacity: .5;
-	}
-
-	@keyframes uranus {
-		0% {
-			top: 5%;
-			opacity: .7;
-		}
-
-		50% {
-			top: 6%;
-			opacity: 1;
-		}
-
-		100% {
-			top: 5%;
-			opacity: .7;
-		}
-	}
-
-	/* SVGs END */
-
-	#intro .title {
-		color: var(--link);
-	}
-
-	#intro hr {
-		z-index: 2;
-		width: 50%;
-		margin: 40px;
-		color: var(--dark);
-	}
-
-	#intro > .title, #intro > .subtitle {
-		z-index: 2;
-		text-align: center;
-	}
-
-	#intro .intro-title, #intro .intro-subtitle {
-		visibility: hidden;
-		opacity: 0;
-		margin-top: -160px;
-		text-align: center;
-		transition-duration: .5s;
-	}
-
-	#intro .slide-down {
-		visibility: visible;
-		opacity: 1;
-		margin-top: 0;
-		transition-duration: 1.5s;
-	}
-
-	#intro .sm-size-article .subtitle {
-		display: inline-block;
-		color: var(--light);
-		padding: 20px;
-		margin: 10px 0;
-	}
-
-	#intro .sm-size-article {
-		max-width: 1500px;
-		z-index: 2;
-	}
-
-	#intro .sm-size-article ul {
-		list-style: none;
-		padding: 20px 0 0 80px;
-	}
-
-	#intro .sm-size-article ul li {
-		cursor: pointer;
-		margin: 20px 0;
-	}
-
-	#intro .sm-size-article ul li:hover {
-		color: var(--black);
-	}
-
-	#intro .sm-size-article ul li .fa-arrow-right a {
-		text-decoration: none;
-		color: inherit;
-		font-weight: 300;
-	}
-
-	#intro .sm-size-article ul li .fa-arrow-right {
-		visibility: hidden;
-		opacity: 0;
-		color: var(--link);
-		transition-duration: .5s;
-	}
-
-	#intro .sm-size-article ul li:hover .fa-arrow-right {
-		visibility: visible;
-		opacity: 1;
-		transition-duration: .5s;
-		margin-left: 50px;
-	}
-
-	#intro .grid {
-		width: 100%;
-		max-width: 1500px;
-		height: 500px;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(2, 1fr);
-		position: relative;
-	}
-
-	#intro .grid > .box {
-		position: relative;
-		width: 100%;
-		height: 100%;
-		cursor: pointer;
-	}
-
-	#intro .grid > .box img {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		padding: 10px;
-	}
-
-	#intro .grid > .box .text {
-		position: absolute;
-		width: 100%;
-		height: 20%;
-		bottom: 0;
-		left: 0;
-		opacity: .5;
-		background: var(--black);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		transition-duration: .5s;
-		visibility: hidden;
-		opacity: 0;
-		color: var(--light);
-	}
-
-	#intro .grid > .box:hover .text {
-		height: 100%;
-		transition-duration: .5s;
-		visibility: visible;
-		opacity: .8;
-	}
-
-	/***************************************************************************************************
-	*
-	*	REFLECTIONS SECTION
-	*
-	***************************************************************************************************/
-
-	#reflections {
-		width: 100%;
-		height: auto;
-		background: var(--dark);
-		color: var(--light);
-		position: relative;
-		padding-top: 130px;
-	}
-
-	#reflections .title, #reflections .subtitle {
-		visibility: hidden;
-		opacity: 0;
-		margin-left: 500px;
-		transition-duration: .5s;
-	}
-
-	#reflections .photographer {
-		text-align: center;
-		padding: 50px;
-	}
-
-	#reflections .photographer a {
-		text-decoration: none;
-		color: var(--link);
-	}
-
-	#reflections .photographer a:hover {
-		text-decoration: underline;
-	}
-
-	#reflections .slide {
-		visibility: visible;
-		opacity: 1;
-		margin-left: 50px;
-		transition-duration: .5s;
-	}
-
-	#reflections #images {
-		display: grid;
-		padding: 5px;
-		grid-gap: 10px;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: auto;
-		width: 100%;
-		max-width: 1500px;
-		height: auto;
-		position: relative;
-		margin: 50px auto;
-	}
-
-	#reflections #images .image {
-		position: relative;
-		transition-duration: .5s;
-		height: 300px;
-	}
-
-	#reflections #images .image img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-	}
-
-	#reflections #images .image div {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 2%;
-		visibility: hidden;
-		opacity: 0;
-		cursor: pointer;
-		background: var(--black);
-		color: var(--light);
-		font-family: var(--sub);
-		padding: 40px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		font-size: 100%;
-	}
-
-	#reflections #images .image div h1 {
-		padding-bottom: 20px;
-	}
-
-	#reflections #images .image div p {
-		text-align: justify;
-	}
-
-	#reflections #images .image:hover div {
-		height: 100%;
-		visibility: visible;
-		opacity: .8;
-		transition-duration: .5s;
-	}
-
-	/***************************************************************************************************
-	*
-	*	ACTIVITIES SECTION
-	*
-	***************************************************************************************************/
-
-	#activities {
-		width: 100%;
-		height: auto;
-		background: var(--light);
-		color: var(--dark);
-		position: relative;
-		padding-top: 60px;
-		overflow: hidden;
-	}
-
-	#activities .title {
-		position: absolute;
-		top: 130px;
-		left: 50px;
-		color: var(--link);
-		transition-duration: .5s;
-		z-index: 3;
-	}
-
-	#activities .rotate {
-		font-size: 2em;
-		transform: rotateZ(-90deg);
-		background: var(--dark);
-		color: var(--light);
-		padding: 20px;
-		top: 200px;
-		left: -5%;
-		transition-duration: .5s;
-		transition-timing-function: ease-in;
-	}
-
-	#activities .specialthanks {
-		font-weight: 900;
-	}
-
-	#activities .specialthanks a {
-		color: var(--link);
-		text-decoration: none;
-	}
-
-	#activities .specialthanks a:hover {
-		text-decoration: underline;
-		transition-duration: .2s;
-	}
-	
-	#activities .activity {
-		position: relative;
-		width: 100%;
-		height: auto;
-		margin: 0 0 10px 0;
-	}
-
-	#activities .activity .subtitle {
-		margin-left: 700px;
-		transition-duration: 1s;
-		opacity: 0;
-		visibility: hidden;
-	}
-
-	#activities .activity .slide {
-		margin-left: 250px;
-		transition-duration: 1s;
-		transition-delay: .5s;
-		opacity: 1;
-		visibility: visible;
-	}
-
-	#activities .activity .container {
-		position: relative;
-		width: 100%;
-		height: auto;
-		border-top: 2px solid var(--dark);
-		margin-left: 900px;
-		opacity: 0;
-		visibility: hidden;
-		transition-duration: .5s;
-	}
-
-	#activities .activity .container article {
-		margin: 10px 0;
-		font-family: var(--main);
-	}
-
-	#activities .activity .container article .code {
-		width: 80%;
-		max-width: 900px;
-		min-height: 300px;
-		padding: 50px;
-		background: var(--dark);
-		color: var(--light);
-		margin: 10px 0 0 0;
-	}
-
-	#activities .activity .container img {
-		border-left: 2px solid var(--link);
-		border-radius: 10px;
-		box-shadow: 0 0 10px grey;
-		height: 400px;
-		width: 100%;
-		max-width: 900px;
-		margin: 10px 0 10px 50px;
-	}
-
-	#activities .activity .container h3 {
-		color: var(--link);
-	}
-
-	#activities .activity .container p {
-		width: 70%;
-		text-align: justify;
-		padding: 20px 0;
-		font-size: 70%;
-		font-family: var(--main);
-	}
-
-	#activities .activity .show {
-		margin-left: 250px;
-		opacity: 1;
-		visibility: visible;
-		transition-duration: 1s;
-		transition-delay: .5s;
-	}
-
-	/***************************************************************************************************
-	*
-	*	TEAM PAGE SECTION
-	*
-	***************************************************************************************************/
-
-	.headspace {
-		width: 100%;
-		background: var(--dark);
-		padding-top: 40px;
-		color: var(--light);
-	}
-
-	.headspace .title {
-		text-align: center;
-		padding: 20px;
-	}
-
-	#team {
-		padding: 20px;
-		width: 100%;
-		height: auto;
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: auto;
-		grid-gap: 40px;
-	}
-
-	#team .sm-size-article {
-		position: relative;
-		padding: 20px;
-		font-family: var(--main);
-		height: auto;
-		cursor: pointer;
-		border: 5px solid var(--light);
-		color: var(--dark);
-		line-height: 150%;
-		transition-duration: .5s;
-	}
-
-	#team .slide-down-btn {
-		position: absolute;
-		top: 5%;
-		right: 5%;
-		color: var(--dark);
-		transition-duration: .2s;
-	}
-
-	#team .slide-down-btn:hover {
-		color: var(--link);
-	}
-
-	#team .sm-size-article p:nth-child(1) {
-		font-weight: 700;
-	}
-
-	#team .sm-size-article p:nth-child(2) {
-		font-size: 60%;
-		font-weight: 300;
-		font-family: var(--main);
-	}
-
-	#team .sm-size-article em {
-		display: block;
-		width: 80%;
-		color: var(--dark);
-	}
-
-	#team .sm-size-article:hover {
-		border-left: 5px solid var(--link);
-		transition-duration: .5s;
-		color: var(--link);
-	}
-
-	#team .sm-size-article .cv {
-		position: absolute;
-		color: var(--light);
-		background: var(--link);
-		padding: 10px;
-		font-size: 100%;
-		text-decoration: none;
-		border-radius: 5px;
-		width: 20%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		top: 0;
-		right: 5%;
-		visibility: hidden;
-		opacity: 0;
-		transition-duration: .5s;
-	}
-
-	#team .sm-size-article .show {
-		top: 50%;
+		right: 0;
 		visibility: visible;
 		opacity: 1;
 		transition-duration: .5s;
@@ -2570,38 +1322,39 @@ body {
 		color: var(--light);
 		transition-duration: .5s;
 	}
-	
+
 }
 
-@media screen and (max-width: 800px) {
+
+
+@media screen and (max-width: 799px) {
 	.sorry, .main-nav {
 		display: none;
-	}
-
-	body {
-		background: var(--dark);
 	}
 
 	.mobile-nav {
 		position: fixed;
 		top: 0;
+		left: 0;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		font-size: 2rem;
 		width: 100%;
+		min-height: 4em;
 		height: auto;
-		background: var(--light);
 		z-index: 5;
-		color: var(--dark);
+		background: var(--dark);
+		color: var(--light);
+		overflow: hidden;
 	}
 
 	.mobile-nav .mobile-nav-btn {
-		background: none;
-		font-size: 5rem;
-		padding: 5% 0;
+		font-size: 150%;
+		padding: .5em;
 		border: none;
+		background: none;
+		color: inherit;
 	}
 
 	.mobile-nav .mobile-nav-btn:active {
@@ -2610,25 +1363,27 @@ body {
 	}
 
 	.mobile-nav .mobile-nav-list {
-		list-style: none;
+		background: none;
+		color: var(--dark);
+		padding: 1em;
 		display: grid;
+		list-style: none;
+		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: auto;
-		grid-template-columns: repeat(2, 1fr);
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-		visibility: hidden;
+		visibility: visible;
 		opacity: 0;
-		position: absolute;
-		top: -20%;
 		transition-duration: .5s;
+		display: none;
 	}
 
 	.mobile-nav .show {
+		display: grid;
+		background: var(--light);
 		visibility: visible;
 		opacity: 1;
-		position: relative;
-		margin: 0;
 		transition-duration: .5s;
 	}
 
@@ -2638,14 +1393,12 @@ body {
 		align-items: center;
 		align-items: center;
 		width: 100%;
-		min-height: 4rem;
 	}
 
 	.mobile-nav .mobile-nav-list li a {
-		font-size: 3rem;
-		padding: 2rem;
 		width: 100%;
-		color: var(--dark);
+		padding: 1em;
+		color: inherit;
 	}
 
 	.mobile-nav .mobile-nav-list li a i {
@@ -2655,11 +1408,11 @@ body {
 	}
 
 	.mobile-nav .mobile-nav-list li button {
-		padding: 1rem;
-		background: var(--dark);
-		border: 2px solid var(--light);
-		color: var(--light);
-		border-radius: 60%;
+		padding: .5em;
+		background: none;
+		font-weight: 900;
+		color: var(--dark);
+		border: none;
 	}
 
 	.mobile-nav .mobile-nav-list li button:active {
@@ -2808,12 +1561,12 @@ body {
 	#banner {
 		width: 100%;
 		height: auto;
-		max-height: 900px;
+		min-height: 80vh;
 		background: var(--dark);
 		position: relative;
 		color: var(--light);
-		padding-top: 100px;
 		overflow: hidden;
+		padding: 1.5em;
 	}
 
 	/* SVGs START */
@@ -2915,128 +1668,22 @@ body {
 	#banner > .sm-size-article {
 		position: relative;
 		z-index: 2;
-		padding: 10%;
-		width: 100%;
-		height: 40%;
 		font-family: var(--sub);
-		font-size: 2rem;
 		text-align: justify;
+		line-height: 200%;
 	}
 
 	#banner > .lg-size-article {
 		position: relative;
 		z-index: 2;
-		width: 100%;
-		height: 40%;
 		font-family: var(--sub);
-		font-size: 3.5rem;
-		padding: 10%;
-		letter-spacing: 5px;
+		letter-spacing: 2px;
+		padding: 1em 0;
+		line-height: 200%;
 	}
 
-	#banner > #right-object {
+	#banner > #right-object, #banner > #right-object .cover, #banner > #right-object #local, #banner > #right-object .cover .caption, #sourcecode {
 		display: none;
-		opacity: 1;
-		position: absolute;
-		z-index: 2;
-		top: 150px;
-		right: 5%;
-		background: transparent;
-		width: 40%;
-		height: 30%;
-		color: var(--light);
-		padding: 20px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	#banner > #right-object #time {
-		display: none;
-		font-family: var(--main);
-		font-size: 3em;
-		border: 2px solid var(--light);
-		padding: 30px;
-		border-radius: 10px;
-		color: var(--link);
-	}
-
-	#banner > #right-object #date, #banner > #right-object #local {
-		display: none;
-		background: var(--dark);
-		color: var(--light);
-		padding: 10px;
-		border-radius: 10px;
-	}
-
-	#banner > #right-object #date {
-		font-family: var(--main);
-		position: absolute;
-		top: 2%;
-		left: 8%;
-	}
-
-	#banner > #right-object #local {
-		position: absolute;
-		font-family: var(--main);
-		bottom: 2%;
-		right: 8%;
-	}
-
-	#banner > #right-object .cover {
-		width: 40%;
-		height: 100%;
-		position: absolute;
-		background: var(--black);
-		opacity: .7;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		top: 0;
-		left: 0;
-		opacity: 0;
-		cursor: pointer;
-		transition-duration: .2s;
-		padding: 20px;
-	}
-
-	#banner > #right-object:hover .cover {
-		width: 100%;
-		height: 100%;
-		opacity: 1;
-		transition-duration: .5s;
-	}
-
-	#banner > #right-object .cover .caption {
-		color: var(--light);
-		font-family: var(--sub);
-		font-weight: 100;
-	}
-
-	#sourcecode {
-		font-size: .8em;
-		position: absolute;
-		padding: 10px;
-		bottom: 10%;
-		right: 5%;
-		color: var(--link);
-		text-decoration: none;
-	}
-
-	#sourcecode .fa-code {
-		visibility: hidden;
-		opacity: 0;
-	}
-
-	#sourcecode:hover {
-		transition-duration: .5s;
-		color: var(--light);
-	}
-
-	#sourcecode:hover .fa-code {
-		visibility: visible;
-		opacity: 1;
-		transition-duration: .2s;
 	}
 
 	/***************************************************************************************************
@@ -3051,7 +1698,7 @@ body {
 		background: var(--light);
 		position: relative;
 		color: var(--dark);
-		padding: 0;
+		padding: 1em;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -3105,27 +1752,25 @@ body {
 
 	#intro hr {
 		z-index: 2;
-		width: 50%;
-		margin: 40px;
+		width: 90%;
+		margin: 1em;
 		color: var(--dark);
 	}
 
 	#intro > .title {
-		font-size: 4rem;
+		
 	}
 
 	#intro > .subtitle {
-		font-size: 2rem;
+		
 	}
 
 	#intro > .title, #intro > .subtitle {
 		z-index: 2;
 		text-align: center;
-		padding: 5%;
 	}
 
 	#intro .intro-title, #intro .intro-subtitle {
-		padding: 5%;
 		visibility: hidden;
 		opacity: 0;
 		margin-top: -140px;
@@ -3142,16 +1787,13 @@ body {
 
 	#intro .sm-size-article {
 		z-index: 2;
-		padding: 0 10%;
-		font-size: 1.5rem;
 		text-align: justify;
+		line-height: 200%;
 	}
 
 	#intro .sm-size-article .subtitle {
 		display: block;
 		color: var(--light);
-		padding: 5%;
-		margin: 5% 0;
 	}
 
 	#intro .sm-size-article ul {
@@ -3201,9 +1843,9 @@ body {
 
 	#intro .grid {
 		width: 100%;
-		max-width: 1500px;
 		height: auto;
 		display: grid;
+		grid-gap: 1em;
 		grid-template-columns: 1fr;
 		grid-template-rows: auto;
 		position: relative;
@@ -3212,9 +1854,8 @@ body {
 	#intro .grid > .box {
 		position: relative;
 		width: 100%;
-		height: 15rem;
+		height: 10em;
 		cursor: pointer;
-		padding: 10%;
 	}
 
 	#intro .grid > .box img {
@@ -3223,7 +1864,6 @@ body {
 		position: absolute;
 		top: 0;
 		left: 0;
-		padding: 10px;
 	}
 
 	#intro .grid > .box .text {
@@ -3263,9 +1903,17 @@ body {
 		background: var(--dark);
 		color: var(--light);
 		position: relative;
-		padding-top: 5%;
-		font-size: 1.5rem;
+		padding-top: 1em;
 		overflow: hidden;
+	}
+
+	#reflections > .title {
+		font-size: 200%;
+	}
+
+	#reflections > .subtitle {
+		font-size: 100%;
+		line-height: 200%;
 	}
 
 	#reflections .title, #reflections .subtitle {
@@ -3298,21 +1946,20 @@ body {
 
 	#reflections #images {
 		display: grid;
-		padding: 20px;
-		grid-gap: 20px;
+		padding: 1em;
+		grid-gap: 1em;
 		grid-template-columns: 1fr;
 		grid-template-rows: auto;
 		width: 100%;
-		max-width: 1500px;
 		height: auto;
 		position: relative;
-		margin: 50px auto;
 	}
 
 	#reflections #images .image {
 		position: relative;
 		transition-duration: .5s;
-		height: 300px;
+		min-width: 15em;
+		min-height: 15em;
 	}
 
 	#reflections #images .image img {
@@ -3324,18 +1971,19 @@ body {
 	}
 
 	#reflections #images .image div {
+		padding: 0 2em;
 		position: absolute;
 		bottom: 0;
 		left: 0;
 		width: 100%;
 		height: 2%;
+		font-size: 80%;
 		visibility: hidden;
 		opacity: 0;
 		cursor: pointer;
 		background: var(--black);
 		color: var(--light);
 		font-family: var(--sub);
-		padding: 20px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -3348,7 +1996,7 @@ body {
 	}
 
 	#reflections #images .image div p {
-		text-align: justify;
+		text-align: center;
 	}
 
 	#reflections #images .image:hover div {
@@ -3370,12 +2018,12 @@ body {
 		background: var(--light);
 		color: var(--dark);
 		position: relative;
-		padding-top: 60px;
 		overflow: hidden;
-		font-size: 2rem;
+		padding: 1em;
 	}
 
 	#activities .title {
+		font-size: 200%;
 		margin-left: 50%;
 		color: var(--link);
 		transition-duration: .5s;
@@ -3383,13 +2031,15 @@ body {
 		opacity: 0;
 	}
 
+	#activities .collections {
+		font-size: 100%;
+		padding: .5em 0;
+	}
+
 	#activities .rotate {
 		opacity: 1;
 		margin: 5% 0;
-		font-size: 2em;
-		background: var(--dark);
-		color: var(--light);
-		padding: 20px;
+		color: var(--link);
 		transition-duration: .5s;
 		transition-timing-function: ease-in;
 	}
@@ -3435,7 +2085,7 @@ body {
 	}
 
 	#activities .activity .slide {
-		margin-left: 5%;
+		margin: 5% 0 0 0;
 		transition-duration: 1s;
 		transition-delay: .5s;
 		opacity: 1;
@@ -3495,9 +2145,13 @@ body {
 	***************************************************************************************************/
 
 	.mobile-nav .back {
-		font-size: .5rem;
+		background: var(--dark);
+		font-size: 100%;
 		text-decoration: none;
-		color: var(--dark);
+	}
+
+	.mobile-nav .back i {
+		color: var(--light);
 	}
 
 	.headspace {
@@ -3509,20 +2163,18 @@ body {
 
 	.headspace .title {
 		text-align: center;
-		padding: 20% 0 5% 0;
-		font-size: 4rem;
+		padding: 0 1em 1em 1em;
 	}
 
 	#team {
 		overflow: hidden;
-		padding: 5%;
+		padding: 1em;
 		width: 100%;
 		height: auto;
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: auto;
-		grid-gap: 5px;
-		font-size: 3rem;
+		grid-gap: 1em;
 	}
 
 	#team .sm-size-article {
@@ -3536,7 +2188,6 @@ body {
 		transition-duration: .5s;
 		color: var(--dark);
 		background: var(--light);
-		font-size: 2rem;
 	}
 
 	#team .slide-down-btn {
@@ -3610,10 +2261,10 @@ body {
 		max-width: 400px;
 		padding: 5%;
 		font-size: 1.2rem;
-		margin-left: 5%;
-		color: var(--black);
+		margin: 1em 0 0 1em;
 		border: none;
-		background: var(--light);
+		background: var(--dark);
+		color: var(--light);
 		border-radius: 5px;
 	}
 
